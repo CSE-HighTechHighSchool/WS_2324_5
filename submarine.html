@@ -19,7 +19,7 @@
     <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
       <div class = "container">
         <a href="#" class ="navbar-brand">
-            <img src = "img/caterpillar-icon.png" alt="Caterpillar Logo" class="d-inline-block align-text-top w-25">
+            <img src = "img/caterpillar-icon.png" alt="Submarine Logo" class="d-inline-block align-text-top w-25">
         </a>
 
         <!-- Hamburger Menu Button -->
@@ -49,9 +49,7 @@
         <div class="row">
           <div class="col-sm-6 p-0 d-flex align-items-center">
             <div class="container">
-              <h1 class="display-7">Submarine company</h1>
-              <br>
-              <h4>Saying (Pizza Pizza)</h4>
+              <h1 class="display-7">About our submarine </h1>
             </div>              
           </div>
         </div>
@@ -63,8 +61,21 @@
         <div class="row">
           <div class="p-3">
             <!-- pt-3 =  padding top -->
-            <h2>The Company</h2>
-            <p> explaination of what happens</p>
+            <h2>What Our Submarines Can Do</h2>
+            <p> Our innovative submarine design is a testament to precision 
+              engineering and advanced technology. This submersible vessel is 
+              crafted with a streamlined hull that minimizes hydrodynamic resistance, 
+              allowing it to effortlessly navigate the depths of the ocean with 
+              efficiency. Equipped with a state-of-the-art propulsion system, it 
+              can travel silently and swiftly, making it ideal for a wide range of 
+              applications, from scientific exploration and underwater research to 
+              military operations. The interior is designed for comfort and functionality, 
+              featuring spacious compartments for the crew, advanced life support systems, 
+              and cutting-edge navigation equipment. With a focus on safety and versatility, 
+              this submarine design is a remarkable solution for exploring the mysteries of 
+              the deep seas while ensuring optimal performance and adaptability in various 
+              marine environments.
+            </p>
           </div>
         </div>
       </div>
@@ -72,39 +83,27 @@
 
     <section class = "container timeline py-5">
       <div class="container text-center mb-3">
-        <h2>Timeline of the Company</h2>
+        <h2>Photo Gallery</h2>
       </div>
-      <div container class="timeline">
-      <div class="container right">
-        <div class="card p-4">
-            <p>1</p>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/submerged_inside.webp" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/submarine_outside.jpeg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
       </div>
-
-      <div class="container right">
-        <div class="card p-4">
-          <p>2</p>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="card p-4">
-          <p>3</p>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="card p-4">
-          <p>4</p>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="card p-4">
-          <p>5</p>
-        </div>
-      </div>
-    </div>
     </section>
 
     <section class="sub-pic pb-4 text-center">
@@ -120,5 +119,9 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      $('.carousel').carousel()
+    </script>
 </body>
 </html>
