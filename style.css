@@ -4,7 +4,7 @@
     position: relative;
 }
 .intro{
-    background-image: url('https://giffiles.alphacoders.com/195/19518.gif');
+    background-image: url("img/underwater-gif.gif");
     height: 360px;
     background-repeat:  round;
 }
@@ -13,14 +13,29 @@
     background-color: #1212ab;
 }
 
-.sub-pic{
-    background-color: #06065D;
-}
-
 .index-body {
     background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #00d4ff 100%);
     ;
 }
+
+.sub-anim {
+    animation: sub 5s linear infinite;
+}
+
+@keyframes sub {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
 
 /*Authors*/
 
