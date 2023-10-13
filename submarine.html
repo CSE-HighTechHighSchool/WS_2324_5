@@ -8,42 +8,113 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" 
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">    
-    <link rel="stylesheet" href="styleSE.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
         crossorigin="anonymous">defer</script>
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a href="index.html"><img src="img/submarinelogo.png" id="navbar img" width="30%" height="30%"/></a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="">Prices</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<body class="index-body">
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+    <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
+      <div class = "container">
+        <a href="#" class ="navbar-brand">
+            <img src = "img/caterpillar-icon.png" alt="Caterpillar Logo" class="d-inline-block align-text-top w-25">
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+      <div class="collapse navbar-collapse" id="navmenu">
+        <!-- Links to hamburger menu botton -->
+        <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link hover-underline-animation nbMenuItem">Prices</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link hover-underline-animation nbMenuItem">Creators</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Intro -->
+    <section class="intro text-dark p-2 text-center"> 
+      <!-- headerBG = custom css BG color, p-2 = padding 2 -->
+      <div class="container bg-image p-5 text-center shadow-1-strong mb-5 text-white">
+        <div class="row">
+          <div class="col-sm-6 p-0 d-flex align-items-center">
+            <div class="container">
+              <h1 class="display-7">Submarine company</h1>
+              <br>
+              <h4>Saying (Pizza Pizza)</h4>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview text-light p-2 m-1 rounded-pill text-center">
+      <div class="container">
+        <div class="row">
+          <div class="p-3">
+            <!-- pt-3 =  padding top -->
+            <h2>The Company</h2>
+            <p> explaination of what happens</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class = "container timeline py-5">
+      <div class="container text-center mb-3">
+        <h2>Timeline of the Company</h2>
+      </div>
+      <div container class="timeline">
+      <div class="container right">
+        <div class="card p-4">
+            <p>1</p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="card p-4">
+          <p>2</p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="card p-4">
+          <p>3</p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="card p-4">
+          <p>4</p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="card p-4">
+          <p>5</p>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+    </section>
 
-
-
+    <section class="sub-pic pb-4 text-center">
+      <img src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
+       alt="Picture of Submarine" class="w-25">
+    </section>
     <!-- Footer (requires Bootstrap icons CSS) -->
     <footer class = "p-5 footer text-light text-center position-relative">
       <div class="container">
-        <p class ="lead">Copyright &copy; SE + Research Practicum 2022-2023 Research Project</p>
+        <p class ="lead">Copyright &copy; 2023 Name of company</p>
         <a href="#" class="position-absolute bottom-0 end-0 p-5">
           <i class="bi bi-arrow-up-circle h2 icon-white"></i>
         </a>
