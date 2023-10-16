@@ -4,7 +4,7 @@
     position: relative;
 }
 .intro{
-    background-image: url("img/underwater-gif.gif");
+    background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
     height: 360px;
     background-repeat:  round;
 }
