@@ -83,6 +83,21 @@
 /*Authors*/
 
 /*Submarine*/
+.submarine-body {
+    background-image: url("img/submarine-info-bg.webp");
+    max-width:100%;
+   height:auto;
+   max-height:100%;
+    /*background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);*/
+}
+
+
+
+.navbar-bottom{
+    border-bottom: 1px solid #fff;
+    position: center;
+}
+
 
 /*Pricing*/
 
@@ -143,6 +158,8 @@
 .nb-background-color {          /* navbar background color */
     background-color: #16419e;
 }
+
+
 
 .nbMenuItem {           /* navbar link text properties */
     font-size: 25px;
