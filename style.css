@@ -26,6 +26,21 @@ h2 {
     color: white;
 }
 
+
+.sub-anim {
+    animation: sub 10s linear infinite;
+}
+
+@keyframes sub {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
 /*Authors*/
 
 /*Submarine*/
