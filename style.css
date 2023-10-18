@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.main-timeline::after {
+.main-timeline::before {
     content: "";
     position: absolute;
     width: 6px;
