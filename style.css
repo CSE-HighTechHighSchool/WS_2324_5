@@ -7,7 +7,7 @@
 }
 
 .overview {
-    background-color: #1212ab;
+    background-color: #4C6AFF;
 }
 
 .index-body {
@@ -72,7 +72,10 @@
 .time-sub {
     animation: timelinesub 2s linear infinite;
     animation-direction: alternate;
+    position: sticky;
+    overflow: clip;
 }
+
 
 
 @keyframes sub {
