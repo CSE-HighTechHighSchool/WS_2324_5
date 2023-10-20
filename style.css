@@ -69,6 +69,12 @@
     animation: sub 10s linear infinite;
 }
 
+.time-sub {
+    animation: timelinesub 2s linear infinite;
+    animation-direction: alternate;
+}
+
+
 @keyframes sub {
     from {
         transform: translateX(100vw);
@@ -78,7 +84,14 @@
     }
 }
 
-
+@keyframes timelinesub {
+    from {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
 
 
 
