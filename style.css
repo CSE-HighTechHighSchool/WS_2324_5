@@ -5,8 +5,8 @@
 }
 .intro{
     background-image: url('https://giffiles.alphacoders.com/195/19518.gif');
-    height: 360px;
-    background-repeat:  round;
+    opacity:0.4;
+    height: 900px;
 }
 
 .overview {
@@ -96,10 +96,12 @@ h2 {
 }
 
 .nb-background-color {          /* navbar background color */
-    background-color: #16419e;
+    background-image:url(img/Navim.jpg);
 }
 
-.nbMenuItem {           /* navbar link text properties */
+.nbMenuItem {   
+            /* navbar link text properties */
+    color:white;
     font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
