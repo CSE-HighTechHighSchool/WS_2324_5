@@ -1,34 +1,82 @@
 /*Index*/
 
-.timeline{
-    position: relative;
-}
 .intro{
-    background-image: url('https://giffiles.alphacoders.com/195/19518.gif');
-    opacity:0.4;
-    height: 900px;
+    background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
+    height: 360px;
+    background-repeat:  round;
 }
 
 .overview {
-    background-color: #1212ab;
-}
-
-.sub-pic{
-    background-color: #06065D;
+    background-color: #4C6AFF;
 }
 
 .index-body {
-    background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #00d4ff 100%);
-    ;
+    background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
+
+.main-timeline{
+    position: relative;
+}
+
+  .timeline {
+    position: relative;
+    width: 40%;
+  }
+  
+  .card {
+    background-color: #a1cdf9;
+    border: 3px solid #1eb0ff;
+  }
+
+  .left {
+    padding: 0px 40px 20px 0px;
+  }
+  .right {
+    padding: 0px 0px 20px 40px;
+    left: 60%;
+  }
+
+
+.sub-anim {
+    animation: sub 10s linear infinite;
+}
+
+.time-sub {
+    animation: timelinesub 2s linear infinite;
+    animation-direction: alternate;
+    overflow: clip;
+    top: 30%;
+}
+
+
+@keyframes sub {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes timelinesub {
+    from {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+
+/*Authors*/
+
+
+
+/*Submarine*/
 
 h2 {
     color: white;
 }
-
-/*Authors*/
-
-/*Submarine*/
 
 /*Pricing*/
 .pricing1{
