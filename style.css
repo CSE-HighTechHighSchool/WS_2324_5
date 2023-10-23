@@ -82,7 +82,6 @@
 }
 
 
-
 .navbar-bottom{
     border-bottom: 1px solid #fff;
     position: center;
@@ -102,6 +101,18 @@
 
 .submarine-subsection-title{
     font-size: 15px;
+}
+
+#moving-submarine{
+    background-image: url("img/submarine_side.png");
+    position: absolute;
+    top:50%;
+    left:50%;
+    height: 70px;
+    width:70px;
+    transform: translate(-50%,-50%);
+    transition:0;
+
 }
 
 /*Pricing*/
