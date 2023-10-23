@@ -74,8 +74,35 @@
 
 /*Submarine*/
 
-h2 {
-    color: white;
+.submarine-body {
+    background-image: url("img/submarine-info-bg.webp");
+    max-width:100%;
+    height:auto;
+    max-height:100%;
+    background-images: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);*/
+}
+
+
+
+.navbar-bottom{
+    border-bottom: 1px solid #fff;
+    position: center;
+}
+
+.submarine-overview{
+    background-color: #0392CC;
+}
+
+.p-design{
+    font-size: 25px;
+}
+
+.text-container{
+    width: 50%
+}
+
+.submarine-subsection-title{
+    font-size: 15px;
 }
 
 /*Pricing*/
