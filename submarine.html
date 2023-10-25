@@ -20,8 +20,8 @@
         rel="stylesheet">
 </head>
 
-<body class="index-body">
-    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+<body class="submarine-body">
+    <nav class="navbar navbar-expand-lg  navbar-dark background-img viewport-header">
     <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
       <div class = "container">
         <a href="index.html" class ="navbar-brand">
@@ -52,20 +52,22 @@
     </nav>
 
     <!-- Intro -->
-    <section class="intro text-dark p-2 text-center"> 
+    <section class=" text-dark p-2 text-center"> 
       <!-- headerBG = custom css BG color, p-2 = padding 2 -->
       <div class="container bg-image p-5 text-center shadow-1-strong mb-5 text-white">
         <div class="row">
           <div class="col-sm-6 p-0 d-flex align-items-center">
             <div class="container">
-              <h1 class="display-7">About our submarine </h1>
+              <h1 class="display-7">Our submarine</h1>
             </div>              
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6 p-0 d-flex align-items-center">
             <div class="container">
-              <img src="#" alt="Submarine Side View">
+              <center>
+                <img src="img/submarine_side.png" width="110%" height="110%"alt="Submarine Side View">
+              </center>
             </div>              
           </div>
         </div>
@@ -77,21 +79,66 @@
         <div class="row">
           <div class="p-3">
             <!-- pt-3 =  padding top -->
-            <h2>What Our Submarines Can Do</h2>
-            <p> Our innovative submarine design is a testament to precision 
-              engineering and advanced technology. This submersible vessel is 
-              crafted with a streamlined hull that minimizes hydrodynamic resistance, 
-              allowing it to effortlessly navigate the depths of the ocean with 
-              efficiency. Equipped with a state-of-the-art propulsion system, it 
-              can travel silently and swiftly, making it ideal for a wide range of 
-              applications, from scientific exploration and underwater research to 
-              military operations. The interior is designed for comfort and functionality, 
-              featuring spacious compartments for the crew, advanced life support systems, 
-              and cutting-edge navigation equipment. With a focus on safety and versatility, 
-              this submarine design is a remarkable solution for exploring the mysteries of 
-              the deep seas while ensuring optimal performance and adaptability in various 
-              marine environments.
-            </p>
+            <ul class="navbar-nav ms-auto inline">     <!-- ms-auto is margin spacing -->
+              <li class="nav-item">
+                <a href="#" class="nav-link hover-underline-animation nbMenuItem">Design</a>
+                <a href="#" class="nav-link hover-underline-animation nbMenuItem">Safety</a>
+                <a href="#" class="nav-link hover-underline-animation nbMenuItem">Interior</a>
+                <a href="#" class="nav-link hover-underline-animation nbMenuItem">Speed</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="submarine-overview text-light p-2 m-1 text-left">
+      <div class="container text-center main-timeline">
+        <img src="img/submarine_top_view.png"
+        alt = "Moving Picture of a Sumbarine" class="about-sub text-center position-sticky w-25">
+        <div class="container m-0 submarine popout right">
+          <div class="d-flex m-4 card rounded-5 p-4">
+              <h2>Propeller</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+          </div>
+        </div>
+  
+        <div class="container m-0 submarine popout left ">
+          <div class="d-flex m-4 card rounded-5 p-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+  
+        <div class="container m-0 submarine popout right">
+          <div class="d-flex m-4 card rounded-5 p-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+  
+        <div class="container m-0 submarine popout left ">
+          <div class="d-flex m-4 card rounded-5 p-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+  
+        <div class="container m-0 submarine popout right ">
+          <div class="d-flex m-4 card rounded-5 p-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
       </div>
@@ -110,7 +157,7 @@
             <img src="img/submarine_outside.jpeg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
           </div>
           <div class="carousel-item active">
-            <img src="img/OceanGatesub.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
+            <img src="img/submerged_inside.webp" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -124,10 +171,10 @@
       </div>
     </section>
 
-    <section class="sub-pic pb-4 text-center">
+    <div class="sub-pic pb-4 overflow-hidden">
       <img src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
-       alt="Picture of Submarine" class="w-25">
-    </section>
+       alt="Picture of Submarine" class="w-25 sub-anim">
+    </div>
     <!-- Footer (requires Bootstrap icons CSS) -->
     <footer class = "p-5 footer text-light text-center position-relative">
       <div class="container">
@@ -137,6 +184,5 @@
         </a>
       </div>
     </footer>
-
 </body>
 </html>
