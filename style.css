@@ -1,5 +1,4 @@
 /*Index*/
-
 .intro{
     background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
     height: 360px;
@@ -18,10 +17,10 @@
     position: relative;
 }
 
-  .timeline {
+.timeline {
     position: relative;
     width: 40%;
-  }
+}
   
   .card {
     background-color: #a1cdf9;
@@ -68,11 +67,22 @@
 }
 
 
-/*Authors*/
-
-
 
 /*Submarine*/
+
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.submarine {
+    position: relative;
+    width: 40%;
+}
+
+.popout{
+    animation:pop-in 0.5s;
+}
 
 .submarine-body {
     max-width:100%;
@@ -103,21 +113,20 @@
     font-size: 15px;
 }
 
-/*Pricing*/
-.pricing1{
-    background-image: url("https://media.tenor.com/vDpI1mQGaHAAAAAC/blue-background-background.gif");
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 3em;
-
+.about-sub {
+    animation: timelinesub  linear infinite;
+    animation-direction: alternate;
+    overflow: clip;
+    top: 1%;
 }
+
+/*Pricing*/
+
 .cardabout:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease;
     border:3px solid rgb(255, 115, 0);
-}
-
-
+  }
 
 /*Other*/
 
@@ -155,10 +164,6 @@
 
 .about-team{
     color: rgb(82, 81, 81);
-}
-
-.authors{
-    background-color: #EFFAF2;
 }
 
 .footer{
@@ -201,4 +206,8 @@
 
 .row {
     justify-content: center;
+}
+
+* {
+ font-family: Montserrat;  
 }
