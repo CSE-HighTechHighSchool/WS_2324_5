@@ -94,7 +94,8 @@ button{
 }
 
 .cardabout {
-    width: 75ch;
+    max-width: 75ch;
+    width: 80%;
     row-gap: 1ch;
     border: 3px solid black;
 }
