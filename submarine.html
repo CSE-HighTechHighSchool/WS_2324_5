@@ -59,7 +59,7 @@
           <div class="col-sm-6 p-0 d-flex align-items-center">
             <div class="container">
               <center>
-                <div id="moving-submarine"></div>
+                <img src="img/submarine_side.png" width="110%" height="110%"alt="Submarine Side View">
               </center>
             </div>              
           </div>
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="overview text-light p-2 rounded-5 rounded-top-0 text-center">
+    <section class="overview text-light p-2 m-1 rounded-pill text-center">
       <div class="container">
         <div class="row">
           <div class="p-3">
@@ -88,7 +88,7 @@
       <div class="container">
         <div class="row">
           <div class="p-3">
-            <h2 class="submarine-subsection-title"><strong>Design</strong></h2>
+            <h2 class="submarine-subsection-title">Design</h2>
             <p class="p-design">A silent sentinel</p>
             <div class="text-container">
               <p>A marvel of modern engineering, the submarine's dark, menacing silhouette conceals its intricate labyrinth of chambers and cutting-edge technology.</p>
@@ -118,7 +118,7 @@
             <img src="img/submarine_outside.jpeg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
           </div>
           <div class="carousel-item active">
-            <img src="img/OceanGatesub.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
+            <img src="img/submerged_inside.webp" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -139,30 +139,12 @@
     <!-- Footer (requires Bootstrap icons CSS) -->
     <footer class = "p-5 footer text-light text-center position-relative">
       <div class="container">
-        <p class ="lead">Copyright &copy 1999-2023 Gate Ocean</p>
+        <p class ="lead">Copyright &copy; 2023 Name of company</p>
         <a href="#" class="position-absolute bottom-0 end-0 p-5">
           <i class="bi bi-arrow-up-circle h2 icon-white"></i>
         </a>
       </div>
     </footer>
-    <script>
-      var submarine = document.querySelector('#submarine');
 
-      document.onmousemove = (event) => {
-          var x = event.clientX * 100 / window.innerWidth + "%";
-          var y = event.clientY * 100 / window.innerHeight + "%";
-          
-          submarine.style.transition = "0s";
-          submarine.style.left = x;
-          submarine.style.top = y;
-      }
-
-      document.onmouseout = (event) => {
-        submarine.style.transition = "0.7s";
-        submarine.style.left = "50%";
-        submarine.style.top = "50%";
-      }
-      /*Code source from: https://dev.to/areeburrub/mouse-tracker-in-just-10-lines-of-javascript-36d9 */
-    </script>
 </body>
 </html>
