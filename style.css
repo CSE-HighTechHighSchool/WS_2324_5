@@ -148,7 +148,7 @@ h2 {
 }
 
 .nb-background-color {          /* navbar background color */
-    background-image:url(img/Navim.jpg);
+    background-image: linear-gradient(0deg, #0367b5 0%, #0287c5 35%, #bcdaea 100%);
 }
 
 .nbMenuItem {   
