@@ -85,7 +85,12 @@ h2 {
     background-color:rgb(181, 196, 238);
   }
 
+button{
+    background-color:orange;
+    color:white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
 /*Other*/
 
 /* -----------------Underline Animation CSS -----------------*/
