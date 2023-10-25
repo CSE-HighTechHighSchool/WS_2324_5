@@ -78,7 +78,7 @@
     max-width:100%;
     height:auto;
     max-height:100%;
-    background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);*/
+    background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
 
@@ -88,7 +88,7 @@
 }
 
 .submarine-overview{
-    background-color: #0392CC;
+    /*background-color: #0392CC;*/
 }
 
 .p-design{
@@ -103,18 +103,6 @@
     font-size: 15px;
 }
 
-#moving-submarine{
-    background-image: url("img/submarine_side.png");
-    position: absolute;
-    top:50%;
-    left:50%;
-    height: 70px;
-    width:70px;
-    transform: translate(-50%,-50%);
-    transition:0;
-
-}
-
 /*Pricing*/
 .pricing1{
     background-image: url("https://media.tenor.com/vDpI1mQGaHAAAAAC/blue-background-background.gif");
@@ -127,7 +115,9 @@
     transform: scale(1.1);
     transition: transform 0.2s ease;
     border:3px solid rgb(255, 115, 0);
-  }
+}
+
+
 
 /*Other*/
 
