@@ -70,16 +70,65 @@
 
 /*Submarine*/
 
-h2 {
-    color: white;
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.1); }
+    100% { opacity: 1; transform: scale(1); }
 }
+
+.submarine {
+    position: relative;
+    width: 40%;
+}
+
+.popout{
+    animation:pop-in 0.5s;
+}
+
+.submarine-body {
+    max-width:100%;
+    height:auto;
+    max-height:100%;
+    background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
+}
+
+.navbar-bottom{
+    border-bottom: 1px solid #fff;
+    position: center;
+}
+
+.p-design{
+    font-size: 25px;
+}
+
+.text-container{
+    width: 50%
+}
+
+.submarine-subsection-title{
+    font-size: 15px;
+}
+
+.about-sub {
+    animation: timelinesub  linear infinite;
+    animation-direction: alternate;
+    overflow: clip;
+    top: 1%;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #0392CC;
+    border-radius: 50%;
+    display: inline-block;
+  }
 
 /*Pricing*/
 
 .cardabout:hover { /*Add animation where border grows bigger and changes color when hovered*/
     transform: scale(1.1);
     transition: transform 0.2s ease;
-    border:3px solid rgb(255, 140, 0);
+    border:3px solid rgb(79, 31, 127);
   }
 
 .card-body {/*Change the color of the card body*/
