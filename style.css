@@ -91,14 +91,9 @@
     background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
-
 .navbar-bottom{
     border-bottom: 1px solid #fff;
     position: center;
-}
-
-.submarine-overview{
-    /*background-color: #0392CC;*/
 }
 
 .p-design{
@@ -119,6 +114,14 @@
     overflow: clip;
     top: 1%;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #0392CC;
+    border-radius: 50%;
+    display: inline-block;
+  }
 
 /*Pricing*/
 
