@@ -117,7 +117,7 @@
     animation: timelinesub  linear infinite;
     animation-direction: alternate;
     overflow: clip;
-    top: 1%;
+    top: 0%;
 }
 
 /*Pricing*/
