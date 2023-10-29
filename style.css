@@ -70,40 +70,32 @@
 
 /*Submarine*/
 
-@keyframes pop-in {
+@keyframes pop-in { /* Pop up animation keyframe */
     0% { opacity: 0; transform: scale(0.1); }
     100% { opacity: 1; transform: scale(1); }
 }
 
-.submarine {
+.submarine { /**/
     position: relative;
     width: 40%;
 }
 
-.popout{
+.popout{  /* Ruleset for popout animation for info cards*/
     animation:pop-in 0.5s;
 }
 
-.submarine-body {
+.submarine-body { /* Gradient Background for Submarine Page*/
     max-width:100%;
     height:auto;
     max-height:100%;
     background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
-.p-design{
-    font-size: 25px;
-}
-
-.text-container{
+.text-container{ /* Specifies width for text containers*/
     width: 50%
 }
 
-.submarine-subsection-title{
-    font-size: 15px;
-}
-
-.about-sub {
+.about-sub { /* Specifies animation properties for moving submarine image*/
     animation: timelinesub  linear infinite;
     animation-direction: alternate;
     overflow: clip;
