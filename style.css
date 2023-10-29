@@ -102,6 +102,10 @@
     top: 3%;
 }
 
+.main-info-cards{ /*Postions the submarine info cards correctly*/
+    position: relative;
+}
+
 /*Pricing*/
 
 .cardabout:hover {
