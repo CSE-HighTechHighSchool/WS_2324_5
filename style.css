@@ -75,7 +75,7 @@
     100% { opacity: 1; transform: scale(1); }
 }
 
-.submarine { /**/
+.submarine { /*Positions picture of sub*/
     position: relative;
     width: 40%;
 }
