@@ -1,46 +1,46 @@
 /*Index*/
-.intro{
+.intro{  /*Adds Background gif to top of index page*/
     background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
     height: 360px;
     background-repeat:  round;
 }
 
-.overview {
+.overview { /*Adds color for overview background*/
     background-color: #4C6AFF;
 }
 
-.index-body {
+.index-body { /*Adds a gradient background color*/
     background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
-.main-timeline{
+.main-timeline{ /*Postions the overall timeline correctly*/
     position: relative;
 }
 
-.timeline {
+.timeline { /*Postions the timeline cards correctly*/
     position: relative;
     width: 40%;
 }
   
-  .card {
+  .card { /*Creates color and border for timeline cards*/
     background-color: #a1cdf9;
     border: 3px solid #1eb0ff;
   }
 
-  .left {
+  .left { /*Positioning for left timeline cards*/
     padding: 0px 40px 20px 0px;
   }
-  .right {
+  .right { /*Positioning for right timeline cards*/
     padding: 0px 0px 20px 40px;
     left: 60%;
   }
 
 
-.sub-anim {
+.sub-anim { /*Sets animation for sub at bottom of paage*/
     animation: sub 10s linear infinite;
 }
 
-.time-sub {
+.time-sub { /*Makes sub in the timeline sway back and forth and sets postion for sticky feature*/
     animation: timelinesub 2s linear infinite;
     animation-direction: alternate;
     overflow: clip;
@@ -48,7 +48,7 @@
 }
 
 
-@keyframes sub {
+@keyframes sub { /*Annimation for the sub that crosses the bottom of the page*/
     from {
         transform: translateX(100vw);
     }
@@ -57,7 +57,7 @@
     }
 }
 
-@keyframes timelinesub {
+@keyframes timelinesub { /*Swaying annimation for the sub that moves vertically*/
     from {
         transform: rotate(-5deg);
     }
@@ -91,11 +91,6 @@
     background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
-.navbar-bottom{
-    border-bottom: 1px solid #fff;
-    position: center;
-}
-
 .p-design{
     font-size: 25px;
 }
@@ -115,14 +110,6 @@
     top: 4%;
 }
 
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #0392CC;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
 /*Pricing*/
 
 .cardabout:hover { /*Add animation where border grows bigger and changes color when hovered*/
@@ -141,8 +128,9 @@ button{ /*gives the button color, text color, and font*/
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.cardabout { 
+.cardabout { /* Creates standard size and spacing for the cards */
     width: 75ch;
+    max-width: 700px;
     row-gap: 1ch;
     border: 3px solid black;
 }
@@ -175,29 +163,15 @@ button{ /*gives the button color, text color, and font*/
 }
 
 
-
-.about{
-    width: 400px;
-    margin: auto;
-}
-
-.about-team{
-    color: rgb(82, 81, 81);
-}
-
 .footer{
     background-color: #16419e; /* footer background */
 }
 
-.howTo{
-    font-size: 20px;
-}
-
-.icon-white {
+.icon-white {  /* Color for icons */
     color: #FFF;
 }
 
-.nb-background-color {          /* navbar background color */
+.nb-background-color {  /* navbar background color */
     background-image: linear-gradient(0deg, #0367b5 0%, #0287c5 35%, #bcdaea 100%);
 }
 
@@ -209,21 +183,7 @@ button{ /*gives the button color, text color, and font*/
     margin-right: 10px;
 }
 
-
-.ovPadLeft {
-    padding-left: 20px;
-}
-
-.ovPadRight {
-    padding-left: 20px;
-}
-
-.procedure{
-    background-color: #EFFAF2;
-    padding: 1px;
-}
-
-.row {
+.row { 
     justify-content: center;
 }
 
