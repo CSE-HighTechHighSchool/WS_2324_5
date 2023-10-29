@@ -106,6 +106,11 @@
     position: relative;
 }
 
+.photo-gallery { /* Adjusts the size of the Photo Gallery */
+    position: relative;
+    width: 50%;
+}
+
 /*Pricing*/
 
 .cardabout:hover {
