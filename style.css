@@ -130,7 +130,7 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
 }
 
 .cardabout { /* Creates standard size and spacing for the cards */
-    width: 75vw;
+    width: 55vw;
     row-gap: 1ch;
     border: 3px solid black;
 }
