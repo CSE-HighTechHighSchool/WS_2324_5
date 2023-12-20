@@ -1,4 +1,6 @@
-/*Index*/
+
+/* -------------------- Index ---------------------*/
+
 .intro{  /*Adds Background gif to top of index page*/
     background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
     height: 360px;
@@ -68,7 +70,7 @@
 
 
 
-/*Submarine*/
+/* -------------------- Submarine ----------------------*/
 
 @keyframes pop-in { /* Pop up animation keyframe */
     0% { opacity: 0; transform: scale(0.1); }
@@ -111,7 +113,7 @@
     width: 50%;
 }
 
-/*Pricing*/
+/* -------------------- Pricing ----------------------*/
 
 .cardabout:hover { /*Adds hoving animation to pricing cards*/
     transform: scale(1.1);
@@ -187,4 +189,67 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
 
 * {
  font-family: Montserrat;  
+}
+
+/* -------------------- SignIn + Register ---------------------*/
+
+table th{
+    /*Keep column headers at the top as table is scrolled*/
+    position: sticky;
+    top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
+    overflow-y: auto;
+
+}
+
+
+.dataForm{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.days{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.headerBG{
+    background-color: #e6e6e6;
+}
+
+.footerBG{
+    background-color: #e6e6e6;
+}
+
+.ordered-List-item-font{
+    font-size:22px;
+}
+.overview-font{
+    font-size:25px;
+}
+
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temps-table{
+    max-height: 250px;  /*prevent table from stretching to bottom of screen*/
+    overflow: auto;
+}
+
+.temps{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nbMenuItem{
+    font-size:25px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.notes{
+    font-size:20px;
 }
