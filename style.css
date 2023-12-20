@@ -75,7 +75,7 @@
     100% { opacity: 1; transform: scale(1); }
 }
 
-.submarine { /*Positions picture of sub*/
+.submarine { /**/
     position: relative;
     width: 40%;
 }
@@ -102,35 +102,27 @@
     top: 3%;
 }
 
-.main-info-cards{ /*Postions the submarine info cards correctly*/
-    position: relative;
-}
-
-.photo-gallery { /* Adjusts the size of the Photo Gallery */
-    position: relative;
-    width: 50%;
-}
-
 /*Pricing*/
 
-.cardabout:hover { /*Adds hoving animation to pricing cards*/
+.cardabout:hover {  /*create a hover effect (increase card size and change border color) for pricing cards*/
     transform: scale(1.1);
     transition: transform 0.2s ease;
     border:3px solid rgb(255, 140, 0);
   }
-  .card-body { /*Sets background color to pricing cards*/
+  .card-body { /*background color for card body*/
     background-color:rgb(181, 196, 238);
   }
 
 
-button{ /*Button that brings the user to the book now page (Added in later)*/
+button{ /*creates the "Pay Now" button*/
     background-color:rgb(255, 140, 0);
     color:white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .cardabout { /* Creates standard size and spacing for the cards */
-    width: 55vw;
+    width: 75ch;
+    max-width: 700px;
     row-gap: 1ch;
     border: 3px solid black;
 }
@@ -143,6 +135,7 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     position: relative;
     /*color: #0087ca;*/
   }
+  
 .hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -155,14 +148,15 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
+  
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
 
 
-.footer{ /* footer background color */
-    background-color: #16419e; 
+.footer{
+    background-color: #16419e; /* footer background */
 }
 
 .icon-white {  /* Color for icons */
