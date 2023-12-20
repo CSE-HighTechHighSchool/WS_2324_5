@@ -14,10 +14,11 @@ import { getDatabase, ref, set, update, child, get} from "https://www.gstatic.co
 const firebaseConfig = {
   apiKey: "AIzaSyBlSTDINoPAB1QLvgpdwkzIg7uAyXMyQEg",
   authDomain: "submarine-eec39.firebaseapp.com",
+  databaseURL: "https://submarine-eec39-default-rtdb.firebaseio.com/",
   projectId: "submarine-eec39",
   storageBucket: "submarine-eec39.appspot.com",
   messagingSenderId: "845236985328",
-  appId: "1:845236985328:web:bd0b2646c47efabd065135"
+  appId: "1:845236985328:web:95ce2e143b7212dc065135"
 };
 
 
