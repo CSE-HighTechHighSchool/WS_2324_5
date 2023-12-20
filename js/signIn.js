@@ -12,17 +12,17 @@ import { getDatabase, ref, set, update, child, get} from "https://www.gstatic.co
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAE8z0cnMEaozK3rSjxxflHKQmS1jw3UOA",
-  authDomain: "ts-fb-rtd-demo.firebaseapp.com",
-  databaseURL: "https://ts-fb-rtd-demo-default-rtdb.firebaseio.com",
-  projectId: "ts-fb-rtd-demo",
-  storageBucket: "ts-fb-rtd-demo.appspot.com",
-  messagingSenderId: "403609067020",
-  appId: "1:403609067020:web:614692e8d10df11de0d829"
+  apiKey: "AIzaSyBlSTDINoPAB1QLvgpdwkzIg7uAyXMyQEg",
+  authDomain: "submarine-eec39.firebaseapp.com",
+  projectId: "submarine-eec39",
+  storageBucket: "submarine-eec39.appspot.com",
+  messagingSenderId: "845236985328",
+  appId: "1:845236985328:web:bd0b2646c47efabd065135"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 
 const auth = getAuth(); // Firebase authentication
 
