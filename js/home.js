@@ -72,7 +72,7 @@ function signOutUser(){
         // Error occurred
     });
 
-    window.location = "home.html";
+    window.location = "index.html";
 }
 
 // ------------------------Set (insert) data into FRD ------------------------
