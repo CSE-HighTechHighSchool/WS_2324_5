@@ -76,10 +76,10 @@ function signOutUser(){
 }
 
 // ------------------------Set (insert) data into FRD ------------------------
-function setData(userID, year, month, day, temperature){
+function setData(userID, year, month, day, depth){
     // Must use brackets around variable name to user it as a key
     set(ref(db, 'users/' + userID + '/data/' + year + '/' + month), {
-        [day]: temperature
+        [day]: depth
     })
     .then(() => {
         alert("Data stored successfully.");
@@ -91,10 +91,10 @@ function setData(userID, year, month, day, temperature){
 
 
 // -------------------------Update data in database --------------------------
-function updateData(userID, year, month, day, temperature){
+function updateData(userID, year, month, day, depth){
     // Must use brackets around variable name to user it as a key
     update(ref(db, 'users/' + userID + '/data/' + year + '/' + month), {
-        [day]: temperature
+        [day]: depth
     })
     .then(() => {
         alert("Data updated successfully.");
@@ -111,7 +111,7 @@ function getData(userID, year, month, day){
     let yearVal = document.getElementById('yearVal');
     let monthVal = document.getElementById('monthVal');
     let dayVal = document.getElementById('dayVal');
-    let tempVal = document.getElementById('tempVal');
+    let depthVal = document.getElementById('depthVal');
 
     const dbref = ref(db);  // Firebase parameter for getting data
 
@@ -123,7 +123,7 @@ function getData(userID, year, month, day){
             dayVal.textContent = day;
 
             // To get specific value from a key:    snapshot.val()[key]
-            tempVal.textContent = snap.val()[day];
+            depthVal.textContent = snap.val()[day];
         }
         else {
             alert('No data found');
@@ -147,7 +147,7 @@ async function getDataSet(userID, year, month){
     monthVal.textContent = `Month: ${month}`;
 
     const days = [];
-    const temps = [];
+    const depths = [];
     const tbodyEl = document.getElementById('tbody-2');     // Select <tbody> element
 
     const dbref = ref(db);  // Firebase parameter for requesting data
@@ -163,7 +163,7 @@ async function getDataSet(userID, year, month){
                 console.log(child.key, child.val());
                 // Push values to corresponding arrays
                 days.push(child.key);
-                temps.push(child.val());
+                depths.push(child.val());
             });
         }
         else{
@@ -177,18 +177,18 @@ async function getDataSet(userID, year, month){
     // Dynamically add table rows to HTML using string interppolation
     tbodyEl.innerHTML = '';     // Clear any existing table
     for(let i = 0; i < days.length; i++){
-        addItemToTable(days[i], temps[i], tbodyEl)
+        addItemToTable(days[i], depths[i], tbodyEl)
     }
 }
 
 // Add a item to the table of data
-function addItemToTable(day, temp, tbody){
+function addItemToTable(day, dep, tbody){
     let tRow = document.createElement("tr");
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
 
     td1.innerHTML = day;
-    td2.innerHTML = temp;
+    td2.innerHTML = dep;
 
     tRow.appendChild(td1);
     tRow.appendChild(td2);
@@ -258,10 +258,10 @@ document.getElementById('set').onclick = function(){
     const year = document.getElementById('year').value;
     const month = document.getElementById('month').value;
     const day = document.getElementById('day').value;
-    const temperature = document.getElementById('temperature').value;
+    const depth = document.getElementById('depth').value;
     const userID = currentUser.uid;
 
-    setData(userID, year, month, day, temperature);
+    setData(userID, year, month, day, depth);
 }
 
 
@@ -270,10 +270,10 @@ document.getElementById('update').onclick = function(){
     const year = document.getElementById('year').value;
     const month = document.getElementById('month').value;
     const day = document.getElementById('day').value;
-    const temperature = document.getElementById('temperature').value;
+    const depth = document.getElementById('depth').value;
     const userID = currentUser.uid;
 
-    updateData(userID, year, month, day, temperature);
+    updateData(userID, year, month, day, depth);
 }
 
 
