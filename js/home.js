@@ -138,23 +138,17 @@ function getData(userID, year, month, day){
 // ---------------------------Get a month's data set --------------------------
 // Must be an async function because you need to get all the data from FRD
 // before you can process it for a table or graph
-async function getDataSet(userID, year, month){
-    let yearVal = document.getElementById('setYearVal');
-    let monthVal = document.getElementById('setMonthVal');
-
-    yearVal.textContent = `Year: ${year}`;
-    monthVal.textContent = `Month: ${month}`;
+async function getDataSet(userID){
 
     const days = [];
     const depths = [];
-    const tbodyEl = document.getElementById('tbody-2');     // Select <tbody> element
 
     const dbref = ref(db);  // Firebase parameter for requesting data
 
     // Wait for all data to be pulled from FRD
     // Must provide the path through the nodes to the data.
 
-    await get(child(dbref, 'users/' + userID + '/data/' + year + '/' + month)).then((snap) => {
+    await get(child(dbref, 'users/' + userID + '/data')).then((snap) => {
         if(snap.exists()){
             console.log(snap.val());
 
@@ -173,30 +167,10 @@ async function getDataSet(userID, year, month){
         alert('Unsuccessful, error: ' + error);
     });
 
-    // Dynamically add table rows to HTML using string interppolation
-    tbodyEl.innerHTML = '';     // Clear any existing table
-    for(let i = 0; i < days.length; i++){
-        addItemToTable(days[i], depths[i], tbodyEl)
-    }
-
+    console.log(days);
+    console.log(depths);
     return {days, depths};
-}
-
-// Add a item to the table of data
-function addItemToTable(day, dep, tbody){
-    let tRow = document.createElement("tr");
-    let td1 = document.createElement("td");
-    let td2 = document.createElement("td");
-
-    td1.innerHTML = day;
-    td2.innerHTML = dep;
-
-    tRow.appendChild(td1);
-    tRow.appendChild(td2);
-
-    tbody.appendChild(tRow);
-
-}
+};
 
 
 // -------------------------Delete a day's data from FRD ---------------------
@@ -209,53 +183,6 @@ function deleteData(userID, year, month, day){
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-async function getChartData() {
-    //const response = await fetch('/rp_Sherlock/data/caterpillar-lifespan.csv'); // Data directory for GitHub pages
-    const response = await fetch('../data/caterpillar-lifespan.csv'); // .. moves up 1 folder. Data directory for local dev (LiveServer)
-    const data = await response.text();    // CSV is in TEXT format
-    //console.log(data);
-
-    const xDate = [];  //x-axis labels = day values
-    const yWTLSpan = [];  //y-axis WTL lifespan values
-    const yDLSpan = []; //y-axis DL lifespan values 
-    const yCTLSpan = []; //y-axis CTL lifespan values
-
-    // \n - new line character
-    // split('\n') will separate the table into an array of individual rows 
-    // slice(start, end) - return a new array starting at index start 
-    //      up to but not including index end. 
-    const table = data.split('\n').slice(1);
-    //console.log(table);
-
-    table.forEach(row => {
-        const columns = row.split(','); // split each row on the commas
-        const date = columns[0];        // assign a day value 
-        xDate.push(date);              // push day values into day array
-        
-        const wtlSpan = parseFloat(columns[1]);    //assign warm temp lifespan values 
-        yWTLSpan.push(wtlSpan);         // push lifespan values to store mean lifespan values 
-
-        const dlSpan = parseFloat(columns[2]);      // daylight lifespan deviation values
-        yDLSpan.push(dlSpan);
-        
-        const ctlSpan = parseFloat(columns[3]);      // cool temp light deviation values
-        yCTLSpan.push(ctlSpan);
-
-        //console.log(xDate, yWTLSpan, yDLSpan, yCTLSpan);
-    });
-    return{xDate, yWTLSpan, yDLSpan, yCTLSpan};
-};
 
 async function createChart() {
     const data = await getDataSet();   // createChart will wait until getChartData() is finished processing
@@ -437,7 +364,7 @@ document.getElementById('getDataSet').onclick = function(){
     const month = document.getElementById('getSetMonth').value;
     const userID = currentUser.uid;
 
-    getDataSet(userID, year, month);
+    getDataSet(userID);
     createChart();
 };
 
