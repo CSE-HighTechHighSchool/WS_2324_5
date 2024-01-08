@@ -36,6 +36,9 @@
         <!-- Links to hamburger menu botton -->
         <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
           <li class="nav-item">
+            <a href="depth.html" class="nav-link hover-underline-animation nbMenuItem">Depth</a>
+          </li>
+          <li class="nav-item">
             <a href="submarine.html" class="nav-link hover-underline-animation nbMenuItem">Submarines</a>
           </li>
           <li class="nav-item">
@@ -44,6 +47,12 @@
           <li class="nav-item">
             <a href="#" class="nav-link hover-underline-animation nbMenuItem">Book Now</a>
           </li>
+          <li class="nav-item">
+            <a  id="userLink" class="nav-link nbMenuItem" href="">User Name</a>
+        </li>
+        <li class="nav-item">
+         <a  id="signOut" class="nav-link hover-underline-animation nbMenuItem" href="">Sign Out</a>
+        </li>
         </ul>
       </div>
       </div>
@@ -271,18 +280,12 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
       </div>
 
       <!-- Table for displaying data set -->
-      <div class="container">
-          <table class="table">
-              <thead>
-              <tr>
-                  <th scope="col">Day</th>
-                  <th scope="col">Depth (m)</th>
-              </tr>
-              </thead>
-              <tbody id = "tbody-2">
-              </tbody>
-          </table>
-      </div>
+      <div class="container d-flex overflow-hidden bg-light rounded-4 chart-wrapper">
+        <canvas id="depthChart"></canvas>
+    </div>
+
+
+
   </div><br>
 
   </div><br>
