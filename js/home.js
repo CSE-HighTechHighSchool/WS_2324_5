@@ -141,7 +141,11 @@ function getData(userID, year, month, day){
 // before you can process it for a table or graph
 async function getDataSet(userID){
 
+    const years = [];
+    const months = [];
     const days = [];
+    const dates = [];
+    
     const depths = [];
 
     const dbref = ref(db);  // Firebase parameter for requesting data
@@ -168,9 +172,11 @@ async function getDataSet(userID){
         alert('Unsuccessful, error: ' + error);
     });
 
-    console.log(days);
-    console.log(depths);
-    return {days, depths};
+    for (let i = 0; i < days.length; i++) {
+        console.log(days[i])
+    }
+
+    return {dates, depths};
 };
 
 
@@ -194,7 +200,7 @@ async function createChart() {
             labels: data.days,
             datasets: [
                 {
-                    label: 'The Number of Caterpillars/Butterflies under the warm temp. light alive',
+                    label: 'Depths (m)',
                     data: data.depths, 
                     fill: false,
                     backgroundColor: 'rgba(252, 128, 3, 0.2)',
@@ -245,7 +251,7 @@ async function createChart() {
             plugins: {      //Display options
                 title: {
                     display: true,
-                    text: 'Depth Reached by Submarine',
+                    text: 'Depths (m) Reached by Submarines',
                     font: {
                         size: 24
                     },
