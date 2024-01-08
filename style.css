@@ -113,6 +113,10 @@
     width: 50%;
 }
 
+.sub-circle{
+    z-index:400;
+}
+
 /* -------------------- Pricing ----------------------*/
 
 .cardabout:hover { /*Adds hoving animation to pricing cards*/
@@ -126,11 +130,58 @@
 
 
 button{ /*Button that brings the user to the book now page (Added in later)*/
-    background-color:rgb(255, 140, 0);
-    color:white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #282A35;
+    color: white;
+    position: relative;
 }
 
+.ribbon1 {
+    width: 80px;
+    font-size: 19px;
+    padding: 4px;
+    position: absolute;
+    right: -36px;
+    top: -23px;
+    text-align: center;
+    border-radius: 25px;
+    transform: rotate(20deg);
+    background-color:  #000000;
+    font-weight: bold;
+    color: rgb(255, 214, 33);
+  }
+  .ribbon2 {
+    width: 80px;
+    font-size: 20px;
+    padding: 4px;
+    position: absolute;
+    right: -36px;
+    top: -23px;
+    text-align: center;
+    border-radius: 25px;
+    transform: rotate(20deg);
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  .ribbon3 {
+    width: 80px;
+    font-size: 20px;
+    padding: 4px;
+    position: absolute;
+    right: -36px;
+    top: -23px;
+    text-align: center;
+    border-radius: 25px;
+    transform: rotate(20deg);
+    background-color: rgb(14, 235, 14);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
 .cardabout { /* Creates standard size and spacing for the cards */
     width: 55vw;
     row-gap: 1ch;
