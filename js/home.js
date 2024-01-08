@@ -360,8 +360,6 @@ document.getElementById('get').onclick = function(){
 
 // Get a data set function call
 document.getElementById('getDataSet').onclick = function(){
-    const year = document.getElementById('getSetYear').value;
-    const month = document.getElementById('getSetMonth').value;
     const userID = currentUser.uid;
 
     getDataSet(userID);
