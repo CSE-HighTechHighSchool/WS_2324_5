@@ -376,7 +376,6 @@ window.onload = function(){
 
     else{
         userLink.innerText = currentUser.firstname;
-        welcome.innerText = "Welcome " + currentUser.firstname;
         userLink.classList.replace("btn", "nav-link");
         userLink.classList.add("btn-primary");
         userLink.href = "#"
