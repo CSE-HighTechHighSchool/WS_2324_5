@@ -39,7 +39,6 @@ const db = getDatabase(app)
 // ---------------------// Get reference values -----------------------------
 let userLink = document.getElementById('userLink');    // Username for navbar
 let signOutLink = document.getElementById('signOut');  // Sign out link
-let welcome = document.getElementById('welcome');      // Welcome header
 let currentUser = null;  // Initialize currentUser to null
 
 
