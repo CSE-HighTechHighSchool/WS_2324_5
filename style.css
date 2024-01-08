@@ -113,6 +113,10 @@
     width: 50%;
 }
 
+.sub-circle{
+    z-index:400;
+}
+
 /* -------------------- Pricing ----------------------*/
 
 .cardabout:hover { /*Adds hoving animation to pricing cards*/
