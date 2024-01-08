@@ -173,7 +173,7 @@ async function getDataSet(userID){
     });
 
     for (let i = 0; i < days.length; i++) {
-        console.log(days[i])
+        console.log(depths[i])
     }
 
     return {dates, depths};
