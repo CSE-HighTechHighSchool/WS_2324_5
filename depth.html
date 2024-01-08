@@ -63,23 +63,30 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
         <span><strong>Warning!</strong> It is necessary to be logged into an account to add information.</span>
     </div>
 
-
+  <section class="overview text-light p-2 mb-5 rounded-pill text-center">
+    <!-- Small description of the company. Also centers it to center of the page -->
+    <div class="container">
+     <div class="row">
+      <div class="col">
+        <div class="p-3"> 
+          <h2>Here is where you can add the depth that you reached during your trip on one of our submarines, 
+            and compare it to other's depth as well!</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
     
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
     <div class="container border">
-      <br><h2>Set & Update Data</h2><br>
-      <ol class="list-group list-group-numbered notes">
-          <li class="list-group-item border-0"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li>
-          <li class="list-group-item border-0"><strong>Update</strong> - will only replace the fields that have changed at the node, or add new fields if they aren't present</li>
-          <li class="list-group-item border-0">If you're collecting data from a sensor, you probably want to use update.</li>
-      </ol><br>
-      
-      <div class="container dataForm mb-5">
+      <br><h2 class="text-center">Set & Update Data</h2><br>
+      <h4 class="mb-2 text-center">Input information for a trip or update a trip you have went on.</h4>
+
+      <div class="container dataForm m-5">
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="year">
-                  <option selected>Trial (Year)</option>
+                  <option selected>Year</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
               </select>
@@ -133,7 +140,7 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
                   <option value="31">31</option>
                               
               </select>
-              <input type="text" class="form-control mb-3" placeholder="Temperature (°F)" id="temperature">
+              <input type="text" class="form-control mb-3" placeholder="Depth (m)" id="depth">
               <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>
               <button type = "button" id="update" name="update" class="btn btn-outline-secondary mb-3 w-100">Update</button>
           </form>       
@@ -142,15 +149,13 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
 
   <!--Get a single datum -->
   <div class="container border">
-      <br><h2>Get a Datum (single data point)</h2><br>
-      <ol class="list-group list-group-numbered notes">
-          <li class="list-group-item border-0">Retrieve a single datum from a node and display it in a table.</li>
-      </ol><br>
+      <br><h2 class="text-center">Get a Trip</h2><br>
+      <h4 class="mb-2 text-center">Retrieve a single trip.</h4>
       
-      <div class="container dataForm mb-5">
+      <div class="container dataForm m-5">
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="getYear">
-                  <option selected>Trial (Year)</option>
+                  <option selected>Year</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
               </select>
@@ -214,7 +219,7 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
               <th scope="col">Year</th>
               <th scope="col">Month</th>
               <th scope="col">Day</th>
-              <th scope="col">Temperature (°F)</th>
+              <th scope="col">Depth (m)</th>
             </tr>
           </thead>
           <tbody>
@@ -222,7 +227,7 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
               <td><p id ="yearVal"></p></td>
               <td><p id ="monthVal"></td>
               <td><p id ="dayVal"></td>
-              <td><p id ="tempVal"></p></td>
+              <td><p id ="depthVal"></p></td>
             </tr>
             <tr>
           </tbody>
@@ -231,15 +236,13 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
 
   <!--Get a data set -->
   <div class="container border">
-      <br><h2>Get a Data Set</h2><br>
-      <ol class="list-group list-group-numbered notes">
-          <li class="list-group-item border-0">Retrieve an entire month's set of data and display in a table</li>
-      </ol><br>
+      <br><h2 class="text-center">Get Trips</h2><br>
+      <h4 class="mb-2 text-center">Retrieve every trip within a range and display a chart.</h4>
       
-      <div class="container dataForm mb-5">
+      <div class="container dataForm m-5">
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="getSetYear">
-                  <option selected>Trial (Year)</option>
+                  <option selected>Year</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
               </select>
@@ -273,7 +276,7 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
               <thead>
               <tr>
                   <th scope="col">Day</th>
-                  <th scope="col">Temperature (°F)</th>
+                  <th scope="col">Depth (m)</th>
               </tr>
               </thead>
               <tbody id = "tbody-2">
@@ -286,16 +289,14 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
 
   <!--Delete Data-->
   <div class="container border">
-      <br><h2>Delete Data</h2><br>
-      <ol class="list-group list-group-numbered notes">
-          <li class="list-group-item border-0">This function will allow you to delete a single day's data</li>
-          <li class="list-group-item border-0">To delete an entire month's data, you need to remove modify the directory path removing the 'day' part.</li>
-      </ol><br>
+      <br><h2 class="text-center">Delete a Trip</h2><br>
+      <h4 class="mb-2 text-center">Delete a single trip.</h4>
       
-      <div class="container dataForm mb-5">
+      
+      <div class="container dataForm m-5">
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="delYear">
-                  <option selected>Trial (Year)</option>
+                  <option selected>Year</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
               </select>

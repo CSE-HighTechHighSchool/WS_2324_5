@@ -264,7 +264,7 @@ table th{
     margin-bottom: 15px;
   }
   
-  /* The close button */
+  /* The close button for the alert */
   .closebtn {
     margin-left: 15px;
     color: white;
@@ -276,7 +276,74 @@ table th{
     transition: 0.3s;
   }
   
-  /* When moving the mouse over the close button */
+  /* Hover animation/color change for the close button */
   .closebtn:hover {
     color: black;
   }
+
+
+
+  table th{
+    /*Keep column headers at the top as table is scrolled*/
+    position: sticky;
+    top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
+    overflow-y: auto;
+
+}
+
+.dataForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.form-select{
+    width: 35vw;
+}
+
+.days{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.headerBG{
+    background-color: #e6e6e6;
+}
+
+.footerBG{
+    background-color: #e6e6e6;
+}
+
+.ordered-List-item-font{
+    font-size:22px;
+}
+.overview-font{
+    font-size:25px;
+}
+
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temps-table{
+    max-height: 250px;  /*prevent table from stretching to bottom of screen*/
+    overflow: auto;
+}
+
+.temps{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nbMenuItem{
+    font-size:25px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.notes{
+    font-size:20px;
+}
