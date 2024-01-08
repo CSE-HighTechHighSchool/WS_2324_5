@@ -280,18 +280,12 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
       </div>
 
       <!-- Table for displaying data set -->
-      <div class="container">
-          <table class="table">
-              <thead>
-              <tr>
-                  <th scope="col">Day</th>
-                  <th scope="col">Depth (m)</th>
-              </tr>
-              </thead>
-              <tbody id = "tbody-2">
-              </tbody>
-          </table>
-      </div>
+      <div class="container d-flex overflow-hidden bg-light rounded-4 chart-wrapper">
+        <canvas id="depthChart"></canvas>
+    </div>
+
+
+
   </div><br>
 
   </div><br>
