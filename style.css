@@ -335,7 +335,7 @@ table th{
     cursor: pointer;
     transition: 0.3s;
   }
-  
+
   /* Hover animation/color change for the close button */
   .closebtn:hover {
     color: black;
