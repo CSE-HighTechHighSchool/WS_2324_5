@@ -92,6 +92,7 @@ window.onload = function(){
     }
 
     else{
+        document.getElementById('popup').hidden=true;
         userLink.innerText = currentUser.firstname;
         userLink.classList.replace("btn", "nav-link");
         userLink.classList.add("btn-primary");
