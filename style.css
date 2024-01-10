@@ -139,9 +139,9 @@
 }
 
 
-area {
+.area {
     /* Specifies outline for clickable areas in the submarine images*/
-    /*outline: 5px solid red !important;*/
+    outline: 5px solid red !important;
 }
 
 .popup {
