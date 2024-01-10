@@ -83,6 +83,8 @@ window.onload = function(){
         userLink.classList.add("btn-primary");
         userLink.href = "register.html"
 
+        console.log(userLink.outerHTML)
+
         signOutLink.innerText="Sign In";
         signOutLink.classList.replace("nav-link", "btn");
         signOutLink.classList.add("btn-success");
@@ -90,10 +92,13 @@ window.onload = function(){
     }
 
     else{
+        document.getElementById('popup').hidden=true;
         userLink.innerText = currentUser.firstname;
         userLink.classList.replace("btn", "nav-link");
         userLink.classList.add("btn-primary");
+        userLink.classList.add("username");
         userLink.href = "#"
+
 
         signOutLink.innerText="Sign Out";
         signOutLink.classList.replace("btn", "nav-link");

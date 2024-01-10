@@ -39,7 +39,6 @@ const db = getDatabase(app)
 // ---------------------// Get reference values -----------------------------
 let userLink = document.getElementById('userLink');    // Username for navbar
 let signOutLink = document.getElementById('signOut');  // Sign out link
-let welcome = document.getElementById('welcome');      // Welcome header
 let currentUser = null;  // Initialize currentUser to null
 
 
@@ -139,8 +138,14 @@ function getData(userID, year, month, day){
 // ---------------------------Get a month's data set --------------------------
 // Must be an async function because you need to get all the data from FRD
 // before you can process it for a table or graph
-async function getDataSet(userID){
+async function getDataSet(userID, year, month){
 
+    let yearVal = document.getElementById('setYearVal');
+    let monthVal = document.getElementById('setMonthVal');
+
+    yearVal.textContent = `Year: ${year}`;
+    monthVal.textContent = `Month: ${month}`;
+    
     const days = [];
     const depths = [];
 
@@ -149,11 +154,11 @@ async function getDataSet(userID){
     // Wait for all data to be pulled from FRD
     // Must provide the path through the nodes to the data.
 
-    await get(child(dbref, 'users/' + userID + '/data')).then((snap) => {
-        if(snap.exists()){
-            console.log(snap.val());
+    await get(child(dbref, 'users/' + userID + '/data/' + year + '/' + month)).then((snapshot) => {
+        if(snapshot.exists()){
+            console.log(snapshot.val());
 
-            snap.forEach(child => {
+            snapshot.forEach(child => {
                 console.log(child.key, child.val());
                 // Push values to corresponding arrays
                 days.push(child.key);
@@ -168,25 +173,19 @@ async function getDataSet(userID){
         alert('Unsuccessful, error: ' + error);
     });
 
-    console.log(days);
-    console.log(depths);
+    for(let i = 0; i < days.length; i++){
+        console.log(days[i])
+    }
+    console.log('')
+    for(let i = 0; i < depths.length; i++){
+        console.log(depths[i])
+    }
+
     return {days, depths};
 };
 
-
-// -------------------------Delete a day's data from FRD ---------------------
-function deleteData(userID, year, month, day){
-    remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day)).then(() => {
-        alert('Data removed successfully')
-    })
-    .catch((error) => {
-        alert('Unsuccessful, err: ' + error);
-    });
-}
-
-
-async function createChart() {
-    const data = await getDataSet();   // createChart will wait until getChartData() is finished processing
+async function createChart(userID, year, month) {
+    const data = await getDataSet(userID, year, month);   // createChart will wait until getChartData() is finished processing
     const ctx = document.getElementById('depthChart');
     const depthChart = new Chart(ctx, {
         type: 'line',
@@ -194,7 +193,7 @@ async function createChart() {
             labels: data.days,
             datasets: [
                 {
-                    label: 'The Number of Caterpillars/Butterflies under the warm temp. light alive',
+                    label: 'Depths (m)',
                     data: data.depths, 
                     fill: false,
                     backgroundColor: 'rgba(252, 128, 3, 0.2)',
@@ -211,7 +210,7 @@ async function createChart() {
                 x: {
                     title: {
                         display: true,
-                        text: 'Date',   // x-axis title
+                        text: 'Day in Month',   // x-axis title
                         font: {         // font properties
                             size: 20
                         }
@@ -245,7 +244,7 @@ async function createChart() {
             plugins: {      //Display options
                 title: {
                     display: true,
-                    text: 'Depth Reached by Submarine',
+                    text: 'Depths (m) Reached by Submarines in Month',
                     font: {
                         size: 24
                     },
@@ -264,12 +263,15 @@ async function createChart() {
 };
 
 
-
-
-
-
-
-
+// -------------------------Delete a day's data from FRD ---------------------
+function deleteData(userID, year, month, day){
+    remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day)).then(() => {
+        alert('Data removed successfully')
+    })
+    .catch((error) => {
+        alert('Unsuccessful, err: ' + error);
+    });
+}
 
 
 
@@ -360,10 +362,10 @@ document.getElementById('get').onclick = function(){
 
 // Get a data set function call
 document.getElementById('getDataSet').onclick = function(){
-    const userID = currentUser.uid;
-
-    getDataSet(userID);
-    createChart();
+    const year = document.getElementById('getSetYear').value;
+    const month = document.getElementById('getSetMonth').value;
+    const userID = currentUser.uid;   
+    createChart(userID, year, month);
 };
 
 // Delete a single day's data function call
