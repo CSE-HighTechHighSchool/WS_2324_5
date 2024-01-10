@@ -140,7 +140,9 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     position: relative;
 }
 
-.ribbon1 {
+
+/*Properties for first ribbon (NEW)*/
+.ribbon1 { 
     width: 80px;
     font-size: 19px;
     padding: 4px;
@@ -154,6 +156,8 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     font-weight: bold;
     color: rgb(255, 214, 33);
   }
+
+  /*Properties for second ribbon (HOT)*/
   .ribbon2 {
     width: 80px;
     font-size: 20px;
@@ -168,6 +172,8 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     font-weight: bold;
     color: rgb(255, 255, 255);
   }
+
+  /*Properties for third ribbon (VALUE)*/
   .ribbon3 {
     width: 80px;
     font-size: 20px;
@@ -225,13 +231,16 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
 .nb-background-color {  /* navbar background color */
     background-image: linear-gradient(0deg, #0367b5 0%, #0287c5 35%, #bcdaea 100%);
 }
-
+ 
+/* navbar link text properties */
 .nbMenuItem {   
-            /* navbar link text properties */
+           
     color:white;
     font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .row { 
@@ -242,59 +251,39 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
  font-family: Montserrat;  
 }
 
-.navBold {
+ /* boldens navbar text */
+.navBold { 
     font-weight: bold;
 }
 
 /* -------------------- SignIn + Register ---------------------*/
 
+/*Keep column headers at the top as table is scrolled*/
 table th{
-    /*Keep column headers at the top as table is scrolled*/
     position: sticky;
     top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
     overflow-y: auto;
 
 }
+
+/*changes sign in button text and related text to white*/
 .signintext{
-    /*changes sign in button text and related text to white*/
     color:white;
 }
+
+/*changes register text to white*/
 .registertext{
-    /*changes register text to white*/
 
     color:white;
 }
 
-
-
-.dataForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-}
-
-
-
-.overview-font{
-    font-size:25px;
-}
-
+/* Properties for the sign up form options */
 .signUpForm{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nbMenuItem{
-    font-size:25px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.notes{
-    font-size:20px;
-}
 
 /* -------------------- Depth ---------------------*/
 
@@ -323,10 +312,12 @@ table th{
     color: black;
   }
 
+/*Controls the width of the anwser selection fields*/
 .form-select{
     width: 35vw;
 }
 
+/* Properties that format the chart */
 .chart-wrapper{
     margin: auto;
     padding: 10px; 
@@ -336,4 +327,12 @@ table th{
     background-color: whitesmoke !important;
     justify-content: center;
     align-items: center;  
+}
+
+/*Text properties for the data forms*/
+.dataForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
