@@ -196,8 +196,8 @@ async function createChart(userID, year, month) {
                     label: 'Depths (m)',
                     data: data.depths, 
                     fill: false,
-                    backgroundColor: 'rgba(252, 128, 3, 0.2)',
-                    borderColor: 'rgba(252, 128, 3, 1)',
+                    backgroundColor: 'rgba(5, 29, 250, 0.2)',
+                    borderColor: 'rgba(5, 29, 250, 1)',
                     borderWidth: 1
                 },
                 
@@ -205,24 +205,22 @@ async function createChart(userID, year, month) {
         },
         options: {
             responsive: true,   // Re-size based on screen size
+            showLine: false,
             maintainAspectRatio: false, // For responsive charts (keeps original width/height aspect ratio)
             scales: {           // Display options for x & y axes
                 x: {
                     title: {
                         display: true,
-                        text: 'Day in Month',   // x-axis title
+                        text: 'Days in The Month',   // x-axis title
                         font: {         // font properties
                             size: 20
                         }
                     },
                     ticks: {
-                        callback: function(val, index) {
-                            // Labeling of tick marks can be controlled by code and font size
-                            return index % 3 === 0 ? this.getLabelForValue(val) : '';
-                        },
                         font: {
                             size: 16
-                        }
+                        },
+                        min: 28
                     }
                 },
                 y: {
@@ -234,7 +232,7 @@ async function createChart(userID, year, month) {
                         }
                     },
                     ticks: {
-                        maxTicksLimit: data.depths.length/2,    //limit # of ticks
+                        maxTicksLimit: data.depths.length,    //limit # of ticks
                         font: {
                             size: 12
                         }
@@ -244,7 +242,7 @@ async function createChart(userID, year, month) {
             plugins: {      //Display options
                 title: {
                     display: true,
-                    text: 'Depths (m) Reached by Submarines in Month',
+                    text: 'Depths (m) Reached by Submarines in The Selected Month',
                     font: {
                         size: 24
                     },
