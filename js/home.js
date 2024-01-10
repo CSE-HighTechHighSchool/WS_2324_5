@@ -184,17 +184,6 @@ async function getDataSet(userID, year, month){
     return {days, depths};
 };
 
-// -------------------------Delete a day's data from FRD ---------------------
-function deleteData(userID, year, month, day){
-    remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day)).then(() => {
-        alert('Data removed successfully')
-    })
-    .catch((error) => {
-        alert('Unsuccessful, err: ' + error);
-    });
-}
-
-
 async function createChart(userID, year, month) {
     const data = await getDataSet(userID, year, month);   // createChart will wait until getChartData() is finished processing
     const ctx = document.getElementById('depthChart');
@@ -221,7 +210,7 @@ async function createChart(userID, year, month) {
                 x: {
                     title: {
                         display: true,
-                        text: 'Date',   // x-axis title
+                        text: 'Day in Month',   // x-axis title
                         font: {         // font properties
                             size: 20
                         }
@@ -255,7 +244,7 @@ async function createChart(userID, year, month) {
             plugins: {      //Display options
                 title: {
                     display: true,
-                    text: 'Depths (m) Reached by Submarines',
+                    text: 'Depths (m) Reached by Submarines in Month',
                     font: {
                         size: 24
                     },
@@ -274,12 +263,15 @@ async function createChart(userID, year, month) {
 };
 
 
-
-
-
-
-
-
+// -------------------------Delete a day's data from FRD ---------------------
+function deleteData(userID, year, month, day){
+    remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day)).then(() => {
+        alert('Data removed successfully')
+    })
+    .catch((error) => {
+        alert('Unsuccessful, err: ' + error);
+    });
+}
 
 
 
