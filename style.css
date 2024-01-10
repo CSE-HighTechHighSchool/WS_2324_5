@@ -113,9 +113,18 @@
     width: 50%;
 }
 
-.sub-circle{
-    z-index:400;
-}
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 820px;
+    background-color: #939597;
+    border: 5px solid #f5df4d;
+    top: -390px;
+    border-radius: 50%;
+    z-index: 1;
+  }
 
 /* -------------------- Pricing ----------------------*/
 
