@@ -253,11 +253,10 @@ table th{
 
 }
 .signintext{
+    /*changes sign in button text and related text to white*/
     color:white
 }
-.container {
-    margin-bottom: 0;
-}
+
 
 
 .dataForm{
