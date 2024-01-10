@@ -242,13 +242,8 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
  font-family: Montserrat;  
 }
 
-.username {
-    background: linear-gradient(0deg, #b671ff 30%, #8f31d3 55%, #7b00ff 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.navBold {
     font-weight: bold;
-
-
 }
 
 /* -------------------- SignIn + Register ---------------------*/
