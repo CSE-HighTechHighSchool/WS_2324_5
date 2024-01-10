@@ -99,6 +99,7 @@
     width: 50%
 }
 
+
 .about-sub { /* Specifies animation properties for moving submarine image*/
     animation: timelinesub  linear infinite;
     animation-direction: alternate;
@@ -268,7 +269,7 @@ table th{
 
 .dataForm{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
