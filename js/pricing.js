@@ -1,3 +1,9 @@
+/*
+Name: Thomas Sherlock, James, Bhargav
+File Name: pricing.js
+Date: 1/10/24
+Purpose: To supply the function of the pricing page to track if the user is logged in and display the correct name
+ */
 
 // ----------------- Page Loaded After User Sign-in -------------------------//
 

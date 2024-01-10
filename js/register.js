@@ -1,3 +1,12 @@
+/*
+Name: Thomas Sherlock, James, Bhargav
+File Name: register.js
+Date: 1/10/24
+Purpose: To supply the function of the register page to track if the user is logged in and display the correct name,
+and allow for the creation of a valid account and encrpyt the password
+ */
+
+
 // This JS file is for registering a new app user ---------------------------//
 
 // ----------------- Firebase Setup & Initialization ------------------------//

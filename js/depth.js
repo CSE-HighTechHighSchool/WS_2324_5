@@ -1,3 +1,12 @@
+/*
+Name: Thomas Sherlock, James, Bhargav
+File Name: depth.js
+Date: 1/10/24
+Purpose: To supply the function of the depth page through accessing the FRD to 
+update, set, get, create chart from, and delete a data point from the data in the FRD
+It also will also track if the user is logged in and display the correct name
+ */
+
 
 // ----------------- Page Loaded After User Sign-in -------------------------//
 
@@ -42,7 +51,7 @@ let signOutLink = document.getElementById('signOut');  // Sign out link
 let currentUser = null;  // Initialize currentUser to null
 
 
-// ----------------------- Get User's Name'Name ------------------------------
+// ----------------------- Get User's Name ------------------------------
 function getUsername(){
     // Grab value for the 'keep logged in' switch
     let keepLoggedIn = localStorage.getItem("keepLoggedIn");
@@ -184,6 +193,7 @@ async function getDataSet(userID, year, month){
     return {days, depths};
 };
 
+//Function that will create the chart
 async function createChart(userID, year, month) {
     const data = await getDataSet(userID, year, month);   // createChart will wait until getChartData() is finished processing
     const ctx = document.getElementById('depthChart');
