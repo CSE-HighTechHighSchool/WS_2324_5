@@ -20,8 +20,6 @@
     <script type="module" src="js/home.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script> 
-    <script src="js/lineChart.js" defer></script>
-
 </head>
 
 <body>
@@ -42,7 +40,7 @@
         <!-- Links to hamburger menu botton -->
         <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
           <li class="nav-item">
-            <a href="depth.html" class="nav-link hover-underline-animation nbMenuItem">Depth</a>
+            <a href="depth.html" class="nav-link text-center hover-underline-animation nbMenuItem">Depth</a>
           </li>
           <li class="nav-item">
             <a href="submarine.html" class="nav-link hover-underline-animation nbMenuItem">Submarines</a>
@@ -51,7 +49,7 @@
             <a href="pricing.html" class="nav-link hover-underline-animation nbMenuItem">Prices</a>
           </li>
           <li class="nav-item">
-            <a  id="userLink" class="nav-link nbMenuItem username" href="">User Name</a>
+            <a  id="userLink" class="nav-link nbMenuItem" href="">User Name</a>
         </li>
         <li class="nav-item">
          <a  id="signOut" class="nav-link hover-underline-animation nbMenuItem" href="">Sign Out</a>
@@ -99,29 +97,12 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="year">
                   <option selected>Year</option>
-                  <option value="2000">2000</option>
-                  <option value="2001">2001</option>
-                  <option value="2002">2002</option>
-                  <option value="2003">2003</option>
-                  <option value="2004">2004</option>
-                  <option value="2005">2005</option>
-                  <option value="2006">2006</option>
-                  <option value="2007">2007</option>
-                  <option value="2008">2008</option>
-                  <option value="2009">2009</option>
-                  <option value="2010">2010</option>
-                  <option value="2011">2011</option>
-                  <option value="2012">2012</option>
-                  <option value="2013">2013</option>
-                  <option value="2014">2014</option>
-                  <option value="2015">2015</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
                   <option value="2018">2018</option>
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
+                  <option value="2023">2023</option>
               </select>
               <select class="form-select mb-3" aria-label="Default select example" id="month">
                   <option selected>Month</option>
@@ -189,29 +170,13 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="getYear">
                 <option selected>Year</option>
-                  <option value="2000">2000</option>
-                  <option value="2001">2001</option>
-                  <option value="2002">2002</option>
-                  <option value="2003">2003</option>
-                  <option value="2004">2004</option>
-                  <option value="2005">2005</option>
-                  <option value="2006">2006</option>
-                  <option value="2007">2007</option>
-                  <option value="2008">2008</option>
-                  <option value="2009">2009</option>
-                  <option value="2010">2010</option>
-                  <option value="2011">2011</option>
-                  <option value="2012">2012</option>
-                  <option value="2013">2013</option>
-                  <option value="2014">2014</option>
-                  <option value="2015">2015</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
                   <option value="2018">2018</option>
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
                   <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+
               </select>
               <select class="form-select mb-3" aria-label="Default select example" id="getMonth">
                   <option selected>Month</option>
@@ -295,17 +260,44 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
       
       <div class="container dataForm m-5">
           <form>
+            <select class="form-select mb-3" aria-label="Default select example" id="getSetYear">
+              <option selected>Year</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+          </select>
+          <select class="form-select mb-3" aria-label="Default select example" id="getSetMonth">
+              <option selected>Month</option>
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="Jul">Jul</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+          </select>
               <button type = "button" id="getDataSet" name="getDataSet" class="btn btn-outline-primary mb-3 w-100">Get Chart</button>
           </form>       
       </div>
 
-      <!-- Table for displaying data set -->
+      <div>
+        <h5 id="setYearVal"></h5>
+        <h5 id="setMonthVal"></h5>
+      </div>
+
+
+      <!-- Chart for displaying data set -->
       <div class="container d-flex overflow-hidden bg-light rounded-4 chart-wrapper">
         <canvas id="depthChart"></canvas>
     </div>
-
-
-
   </div><br>
 
   </div><br>
@@ -320,24 +312,6 @@ Have graph underneath for everyone's trips; hover over dot to see who went on tr
           <form>
               <select class="form-select mb-3" aria-label="Default select example" id="delYear">
                 <option selected>Year</option>
-                  <option value="2000">2000</option>
-                  <option value="2001">2001</option>
-                  <option value="2002">2002</option>
-                  <option value="2003">2003</option>
-                  <option value="2004">2004</option>
-                  <option value="2005">2005</option>
-                  <option value="2006">2006</option>
-                  <option value="2007">2007</option>
-                  <option value="2008">2008</option>
-                  <option value="2009">2009</option>
-                  <option value="2010">2010</option>
-                  <option value="2011">2011</option>
-                  <option value="2012">2012</option>
-                  <option value="2013">2013</option>
-                  <option value="2014">2014</option>
-                  <option value="2015">2015</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
                   <option value="2018">2018</option>
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
