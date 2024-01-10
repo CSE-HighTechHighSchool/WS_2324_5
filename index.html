@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" 
-        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">    
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-        crossorigin="anonymous" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat&family=Work+Sans:wght@500;800&display=swap" 
-        rel="stylesheet">
-        <script type="module" src="js/home.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat&family=Work+Sans:wght@500;800&display=swap"
+    rel="stylesheet">
+  <script type="module" src="js/index.js" defer></script>
 
 </head>
 
 <body class="index-body">
-    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+  <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
     <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
-      <div class = "container">
-        <a href="#" class ="navbar-brand">
-            <img src = "img/Wave.png" alt="Logo Wave" class="d-inline-block align-text-top w-25">
-        </a>
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <img src="img/Wave.png" alt="Logo Wave" class="d-inline-block align-text-top w-25">
+      </a>
 
-        <!-- Hamburger Menu Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Hamburger Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+      <!-- Collapsible navbar menu with custom hover underline CSS animation -->
       <div class="collapse navbar-collapse" id="navmenu">
         <!-- Links to hamburger menu botton -->
-        <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto is margin spacing -->
           <li class="nav-item">
             <a href="depth.html" class="nav-link hover-underline-animation nbMenuItem">Depth</a>
           </li>
@@ -47,138 +49,151 @@
             <a href="pricing.html" class="nav-link hover-underline-animation nbMenuItem">Prices</a>
           </li>
           <li class="nav-item">
-            <a  id="userLink" class="nav-link nbMenuItem navBold" href="">User Name</a>
+            <a id="userLink" class="nav-link nbMenuItem navBold" href="">User Name</a>
           </li>
           <li class="nav-item">
             <a id="signOut" class="nav-link hover-underline-animation nbMenuItem navBold" href="">Sign Out</a>
           </li>
         </ul>
       </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Intro -->
-    <section class="intro text-dark p-2 d-flex text-center align-items-center"> 
-      <!-- Positions the company name and slogan to center of screen and allows for gif as the background -->
-      <div class="container bg-image p-5 text-center text-primary-emphasis">
-        <div class="row ">
-          <div class="col-m-6 p-0">
-            <div class="container">
-              <h1 class="display-1 fw-bold">Ocean's Expanse</h1>
-              <br>
-              <h4>The Gate to the Ocean</h4>
-            </div>              
+  <!-- Intro -->
+  <section class="intro text-dark p-2 d-flex text-center align-items-center">
+    <!-- Positions the company name and slogan to center of screen and allows for gif as the background -->
+    <div class="container bg-image p-5 text-center text-primary-emphasis">
+      <div class="row ">
+        <div class="col-m-6 p-0">
+          <div class="container">
+            <h1 class="display-1 fw-bold">Ocean's Expanse</h1>
+            <br>
+            <h4>The Gate to the Ocean</h4>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Overview -->
-    <section class="overview text-light p-2 rounded-5 rounded-top-0 text-center">
-      <!-- Small description of the company. Also centers it to center of the page -->
-      <div class="container">
-       <div class="row">
+  <!-- Overview -->
+  <section class="overview text-light p-2 rounded-5 rounded-top-0 text-center">
+    <!-- Small description of the company. Also centers it to center of the page -->
+    <div class="container">
+      <div class="row">
         <div class="col">
-          <div class="p-3"> 
+          <div class="p-3">
             <h2>The Company</h2>
-            <p> Our company has the main goal of providing the safest and most luxorious submarine trips for all of our passengers to enjoy.
-              We show our paying passengers many underwater history landmarks or any of the beautiful scenery that they want to see. 
-              In recent years, we have made great advancements in safety, speed, and overall enjoyment to provide the best service possible.
+            <p> Our company has the main goal of providing the safest and most luxorious submarine trips for all of our
+              passengers to enjoy.
+              We show our paying passengers many underwater history landmarks or any of the beautiful scenery that they
+              want to see.
+              In recent years, we have made great advancements in safety, speed, and overall enjoyment to provide the
+              best service possible.
             </p>
           </div>
         </div>
       </div>
-    </section>
+  </section>
 
-    <!--Timeline-->
-    <section class = "container m-auto d-block py-5">
+  <!--Timeline-->
+  <section class="container m-auto d-block py-5">
 
-      <div class="container text-white text-center mb-3"> <!--Timeline title/header -->
-        <h1>Company's History</h1>
-      </div >
+    <div class="container text-white text-center mb-3"> <!--Timeline title/header -->
+      <h1>Company's History</h1>
+    </div>
 
-      <div class="container text-center main-timeline"> 
+    <div class="container text-center main-timeline">
 
-        <img src="https://miro.medium.com/v2/resize:fit:1400/1*XnUxeRUUxS2RUuUL-w_5nA.png"
-        alt = "Moving Picture of a Sumbarine" class="time-sub text-center position-sticky w-25"> <!-- Vertically moving stubmarine in timeline -->
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*XnUxeRUUxS2RUuUL-w_5nA.png"
+        alt="Moving Picture of a Sumbarine" class="time-sub text-center position-sticky w-25">
+      <!-- Vertically moving stubmarine in timeline -->
 
       <div class="container m-0 timeline right"> <!-- Card on the right of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2003</h2>
-            <p>Ocean's Expanse was founded by the three owners, Thomas Sherlock, James Chen, and Bhargav Yerramsetty, with the idea to 
-              provide people with the chance to be on luxorious submarine trips underwater. 
-            </p>
+          <p>Ocean's Expanse was founded by the three owners, Thomas Sherlock, James Chen, and Bhargav Yerramsetty, with
+            the idea to
+            provide people with the chance to be on luxorious submarine trips underwater.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline left "> <!-- Card on the left of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2006</h2>
-            <p>The first Mark I submarine, M1, was created and remotely tested by the owners. The test failed after reaching a depth of 1000 ft, 304.8 m,
-               but it provided necessary information in order to go further.
-            </p>
+          <p>The first Mark I submarine, M1, was created and remotely tested by the owners. The test failed after
+            reaching a depth of 1000 ft, 304.8 m,
+            but it provided necessary information in order to go further.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline right"> <!-- Card on the right of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2008</h2>
-            <p>The first human piloted submarine, Mark II, was created. It was very large, slow, and uncomfortable, 
-              but was sucessfully reached a depth of 5000 ft, 1524 m, and returned to the surface.
-            </p>
+          <p>The first human piloted submarine, Mark II, was created. It was very large, slow, and uncomfortable,
+            but was sucessfully reached a depth of 5000 ft, 1524 m, and returned to the surface.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline left "> <!-- Card on the left of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2014</h2>
-            <p>The Mark III submarine was created which improved upon the Mark II's speed and fuel efficiency.
-            </p>
+          <p>The Mark III submarine was created which improved upon the Mark II's speed and fuel efficiency.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline right "> <!-- Card on the right of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2018</h2>
-            <p>This year, both the Mark IV and Mark V were created. Mark IV focused more on decreasing the size of the submarine,
-              while Mark V focused more on reaching deeper depths. 
-            </p>
+          <p>This year, both the Mark IV and Mark V were created. Mark IV focused more on decreasing the size of the
+            submarine,
+            while Mark V focused more on reaching deeper depths.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline left "> <!-- Card on the left of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2021</h2>
-            <p>Mark VI was created which improved upon every aspect of the past iterations. It was able to move at double the speeds, was more luxorious, 
-              had more space for the passengers while being smaller overall, and was able to reach a depth of 20000 ft, or 6096 m.
-            </p>
+          <p>Mark VI was created which improved upon every aspect of the past iterations. It was able to move at double
+            the speeds, was more luxorious,
+            had more space for the passengers while being smaller overall, and was able to reach a depth of 20000 ft, or
+            6096 m.
+          </p>
         </div>
       </div>
 
       <div class="container m-0 timeline right "> <!-- Card on the right of the timeline -->
         <div class="d-flex m-4 card rounded-5 p-4">
           <h2>2023</h2>
-          <p>Currently, we at Ocean's Expanse has made the most technologically advanced and comfortable sumbarine. It can reach depths up to 35000 ft, 10668 m,
-            and can hold up to 20 passengers when filled. It is the safest submarine to exist and is almost indestructible. We look forward to providing even better submarines in the near future. 
+          <p>Currently, we at Ocean's Expanse has made the most technologically advanced and comfortable sumbarine. It
+            can reach depths up to 35000 ft, 10668 m,
+            and can hold up to 20 passengers when filled. It is the safest submarine to exist and is almost
+            indestructible. We look forward to providing even better submarines in the near future.
           </p>
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
-    <div class="sub-pic pb-4 overflow-hidden"> <!-- Horizontally moving submarine at the bottom of the page -->>
-      <img src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
-       alt="Picture of Submarine" class="w-25 sub-anim">
+  <div class="sub-pic pb-4 overflow-hidden"> <!-- Horizontally moving submarine at the bottom of the page -->>
+    <img
+      src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
+      alt="Picture of Submarine" class="w-25 sub-anim">
+  </div>
+
+  <!-- Footer (includes Bootstrap icons CSS) -->
+  <footer class="p-5 footer text-light text-center position-relative">
+    <div class="container">
+      <p class="lead">Copyright &copy; 1999-2024 Ocean's Expanse</p>
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+      </a>
     </div>
-
-    <!-- Footer (includes Bootstrap icons CSS) -->
-    <footer class = "p-5 footer text-light text-center position-relative">
-      <div class="container">
-        <p class ="lead">Copyright &copy; 1999-2024 Ocean's Expanse</p>
-        <a href="#" class="position-absolute bottom-0 end-0 p-5">
-          <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-        </a>
-      </div>
-    </footer>
+  </footer>
 </body>
+
 </html>

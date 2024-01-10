@@ -1,3 +1,12 @@
+/*
+Name: Thomas Sherlock, James, Bhargav
+File Name: index.js
+Date: 1/10/24
+Purpose: To supply the function of the singIn page to allow for the user to sign in,
+track if the user is logged in and display the correct name,
+and to check if the account is a valid account in the FRD
+ */
+
 // ----------------- User Sign-In Page --------------------------------------//
 
 // ----------------- Firebase Setup & Initialization ------------------------//

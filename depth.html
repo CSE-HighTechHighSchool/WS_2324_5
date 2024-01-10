@@ -17,12 +17,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat&family=Work+Sans:wght@500;800&display=swap" 
         rel="stylesheet">
     <script type="module" src="js/depth.js" defer></script>
-    <script type="module" src="js/home.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script> 
 </head>
 
-<body>
+<body class = 'index-body'>
     <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
     <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
       <div class = "container">
@@ -66,7 +65,7 @@
     </div>
 
   <section class="overview text-light p-2 mb-3 mt-3 rounded-pill text-center">
-    <!-- Small description of the company. Also centers it to center of the page -->
+    <!-- Small description of the page. Also centers it to center of the page -->
     <div class="container">
      <div class="row">
       <div class="col">
@@ -81,7 +80,7 @@
     
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
-    <div class="container border">
+    <div class="container border bg-white">
       <br><h2 class="text-center">Set & Update Data</h2><br>
       <h4 class="mb-2 text-center">Input information for a trip or update a trip you have went on.</h4>
 
@@ -154,7 +153,7 @@
   </div><br>
 
   <!--Get a single datum -->
-  <div class="container border">
+  <div class="container border bg-light">
       <br><h2 class="text-center">Get a Trip</h2><br>
       <h4 class="mb-2 text-center">Retrieve a single trip.</h4>
       
@@ -246,9 +245,9 @@
   </div><br>
 
   <!--Get a data set -->
-  <div class="container border">
+  <div class="container border bg-light">
       <br><h2 class="text-center">Get Trips</h2><br>
-      <h4 class="mb-2 text-center">Retrieve every trip and display a chart.</h4>
+      <h4 class="mb-2 text-center">Retrieve every trip in one month and display a chart.</h4>
       
       <div class="container dataForm m-5">
           <form>
@@ -295,10 +294,9 @@
   </div><br>
 
   <!--Delete Data-->
-  <div class="container border">
+  <div class="container border bg-light mb-2">
       <br><h2 class="text-center">Delete a Trip</h2><br>
       <h4 class="mb-2 text-center">Delete a single trip.</h4>
-      
       
       <div class="container dataForm m-5">
           <form>

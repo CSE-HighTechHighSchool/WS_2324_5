@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submarines</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" 
-        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">    
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-        crossorigin="anonymous" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat&family=Work+Sans:wght@500;800&display=swap" 
-        rel="stylesheet">
-    <script type="module" src="js/submarine.js" defer></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submarines</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat&family=Work+Sans:wght@500;800&display=swap"
+    rel="stylesheet">
+  <script type="module" src="js/submarine.js" defer></script>
+  <script type="module" src="js/jquery.imagemapster.js" defer></script>
+
 </head>
 
 <body class="submarine-body">
   <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
     <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
-      <div class = "container">
-        <a href="index.html" class ="navbar-brand">
-            <img src = "img/Wave.png" alt="Logo Wave" class="d-inline-block align-text-top w-25">
-        </a>
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/Wave.png" alt="Logo Wave" class="d-inline-block align-text-top w-25">
+      </a>
 
-        <!-- Hamburger Menu Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Hamburger Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+      <!-- Collapsible navbar menu with custom hover underline CSS animation -->
       <div class="collapse navbar-collapse" id="navmenu">
         <!-- Links to hamburger menu botton -->
-        <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto is margin spacing -->
           <li class="nav-item">
             <a href="depth.html" class="nav-link hover-underline-animation nbMenuItem">Depth</a>
           </li>
@@ -49,130 +52,215 @@
             <a href="pricing.html" class="nav-link hover-underline-animation nbMenuItem">Prices</a>
           </li>
           <li class="nav-item">
-            <a  id="userLink" class="nav-link nbMenuItem navBold" href="">User Name</a>
-        </li>
-        <li class="nav-item">
-         <a  id="signOut" class="nav-link hover-underline-animation nbMenuItem navBold" href="">Sign Out</a>
-        </li>
+            <a id="userLink" class="nav-link nbMenuItem navBold" href="">User Name</a>
+          </li>
+          <li class="nav-item">
+            <a id="signOut" class="nav-link hover-underline-animation nbMenuItem navBold" href="">Sign Out</a>
+          </li>
         </ul>
       </div>
-      </div>
-    </nav>
-
-    <!-- Intro -->
-    <section class=" text-dark p-2 text-center"> 
-      <!-- headerBG = custom css BG color, p-2 = padding 2 -->
-      <div class="container bg-image p-5 text-center shadow-1-strong mb-5 text-white">
-        <div class="row">
-          <div class="col-sm-6 p-0 d-flex align-items-center">
-            <div class="container">
-              <h1 class="display-7 pb-5">Our Submarines</h1>
-            </div>              
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 p-0 d-flex align-items-center">
-                <img src="https://pngimg.com/uploads/submarine/submarine_PNG71.png" width="110%" height="110%"alt="Submarine Side View">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--Navbar of the Submarine Features-->
-    
-
-    <!-- Submarine Info Cards -->
-    <section class="text-light p-2 m-1 text-left">
-      <div class="container text-center main-info-cards">
-        <section class="overview text-light p-2 m-1 rounded-pill text-center">
-          <div class="container">
-            <div class="row">
-              <div class="p-3">
-                <!-- pt-3 =  padding top -->
-                <ul class="navbar-nav ms-auto inline">     <!-- ms-auto is margin spacing -->
-                  <li class="nav-item"> <!-- Jumps to different info cards based on id -->
-                    <a href="#" class="nav-link hover-underline-animation nbMenuItem">Submarine Exterior</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="container text-center main-info-cards">
-          <img src="img/titanic_submarine.png"
-          alt = "Exterior Submarine Diagram" class="about-sub text-center position-sticky" width="85%"> 
-          <!--image source: https://slate.com/business/2023/06/titanic-submarine-missing-tourism-business.html-->
-          <div class="timeline right">
-            
-          </div>
-        </div>
-        <section class="overview text-light p-2 m-1 rounded-pill text-center">
-          <div class="container">
-            <div class="row">
-              <div class="p-3">
-                <!-- pt-3 =  padding top -->
-                <ul class="navbar-nav ms-auto inline">     <!-- ms-auto is margin spacing -->
-                  <li class="nav-item"> <!-- Jumps to different info cards based on id -->
-                    <a href="#" class="nav-link hover-underline-animation nbMenuItem">Submarine Interior</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="container text-center main-info-cards">
-          <img src="img/submarine_interior.png"
-          alt = "Interior Submarine Diagram" class="about-sub text-center position-sticky" width="65%"> 
-          <!--image source: https://www.boredpanda.com/titan-submarine-run-out-oxygen/-->
-        </div>
-       
-        
-  
-    </section>
-
-    <!-- Image Carousel (Photo Gallery) - From Bootstrap -->
-    <section class = "container photo-gallery py-5">
-      <div class="container text-center mb-3">
-        <h2 class="text-light">Photo Gallery</h2>
-      </div>
-      <!-- Carousel images -->
-      <div id="submarine-carousel" class="carousel slide" data-bs-touch="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/submerged_inside.webp" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <img src="img/submarine_outside.jpeg" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <!-- Image Source: https://media.gettyimages.com/id/82726521/photo/2-man-submarine-underwater.jpg?s=612x612&w=0&k=20&c=n-XQj7hts6kWtjmMMGWg-f3pfF17x5NfQTB_PSjemu4= -->
-            <img src="img/submarine-underwater.jpg" class="d-block w-100">
-          </div>
-        </div>
-        <!-- Carousel controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#submarine-carousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#submarine-carousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <div class="sub-pic pb-4 overflow-hidden"> <!-- Horizontally moving submarine at the bottom of the page -->>
-      <img src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
-       alt="Picture of Submarine" class="w-25 sub-anim">
     </div>
+  </nav>
 
-    <!-- Footer (requires Bootstrap icons CSS) -->
-    <footer class = "p-5 footer text-light text-center position-relative">
-      <div class="container">
-        <p class ="lead">Copyright &copy; 1999-2024 Ocean's Expanse</p>
-        <a href="#" class="position-absolute bottom-0 end-0 p-5">
-          <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-        </a>
+  <!-- Intro -->
+  <section class=" text-dark p-2 text-center">
+    <!-- headerBG = custom css BG color, p-2 = padding 2 -->
+    <div class="container bg-image p-5 text-center shadow-1-strong mb-5 text-white">
+      <div class="row">
+        <div class="col-sm-6 p-0 d-flex align-items-center">
+          <div class="container">
+            <h1 class="display-7 pb-5">Our Submarines</h1>
+          </div>
+        </div>
       </div>
-    </footer>
+      <div class="row">
+        <div class="col-sm-6 p-0 d-flex align-items-center">
+          <img src="https://pngimg.com/uploads/submarine/submarine_PNG71.png" width="110%" height="110%"
+            alt="Submarine Side View">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Interactive Submarine Exterior Image -->
+  <section class="text-light p-2 m-1 text-left">
+    <div class="container text-center main-info-cards">
+      <section class="overview text-light p-2 m-1 rounded-pill text-center">
+        <div class="container">
+          <div class="row">
+            <div class="p-3">
+              <!-- pt-3 =  padding top -->
+              <ul class="navbar-nav ms-auto inline"> <!-- ms-auto is margin spacing -->
+                <li class="nav-item"> <!-- Jumps to different info cards based on id -->
+                  <a href="#" class="nav-link hover-underline-animation nbMenuItem">Submarine Exterior</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container text-center main-info-cards">
+        <!--image source: https://slate.com/business/2023/06/titanic-submarine-missing-tourism-business.html-->
+        <img src="img/titanic_submarine.png" usemap="#submarine-components"
+          class="about-sub text-center position-sticky">
+
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="submarine-components">
+          <area alt="Horizontal Thruster" title="Horizontal Thruster" href="#hthruster" coords="210,460,31"
+            shape="circle">
+          <area alt="Vertical Thruster" title="Vertical Thruster" href="#vthruster" coords="337,352,26" shape="circle" >
+          <area alt="Front of Pressure Chamber" title="Front of Pressure Chamber" href="#fpressurechamber"
+            coords="188,412,23" shape="circle">
+          <area alt="Rear of Pressure Chamber" title="Rear of Pressure Chamber" href="#rpressurechamber"
+            coords="466,277,27" shape="circle">
+          <area alt="Tail Cone" title="Tail Cone" href="#tailcone" coords="839,242,24" shape="circle">
+          <area alt="Porthole Window" title="Porthole Window" href="#portholewindow" coords="93,373,24" shape="circle">
+          <area alt="Landing Frame" title="Landing Frame" href="#landingframe" coords="502,539,25" shape="circle">
+        </map>
+        
+        <!-- Popups for exterior image-->
+        <div class="popup" id="vthruster">
+          The vertical thruster allows the submarine to ascend or descend in the water by generating upward or downward
+          propulsion, controlling its depth.
+          <!-- Close button -->
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="hthruster">
+          The horizontal thruster helps in steering the submarine left or right by providing lateral propulsion, aiding
+          in navigation and maintaining the desired direction.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="tailcone">
+          The tail cone contributes to the stability and maneuverability of the submarine, minimizing drag and
+          turbulence while moving through water.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="landingframe">
+          The landing frame facilitates the safe docking and anchoring of the submarine when it surfaces or reaches
+          port, assisting in stability during stationary periods.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="portholewindow">
+          Porthole windows provide external visibility to the crew, allowing observation of the surrounding environment
+          and aiding in navigation when submerged.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="fpressurechamber">
+          The front of the pressure chamber is where the main control and navigation systems are situated, allowing the
+          crew to monitor and control the submarine's operations.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+        <div class="popup" id="rpressurechamber">
+          The rear of the pressure chamber houses important systems like power generation and propulsion mechanisms,
+          ensuring the submarine's movement and functionality.
+          <a class="close" href="#submarine-components">X</a>
+        </div>
+      </div>
+
+      <!-- Interactive Submarine Interior Image -->
+      <section class="overview text-light p-2 m-1 rounded-pill text-center">
+        <div class="container">
+          <div class="row">
+            <div class="p-3">
+              <!-- pt-3 =  padding top -->
+              <ul class="navbar-nav ms-auto inline"> <!-- ms-auto is margin spacing -->
+                <li class="nav-item"> <!-- Jumps to different info cards based on id -->
+                  <a href="#" class="nav-link hover-underline-animation nbMenuItem">Submarine Interior</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+
+
+      <div class="container text-center main-info-cards">
+
+
+
+        <!--image source: https://www.boredpanda.com/titan-submarine-run-out-oxygen/-->
+        <img src="img/submarine_interior.png" usemap="#submarine-interior" class="img-round">
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="submarine-interior">
+          <area alt="Game Controller" title="Game Controller" href="#gamecontroller" coords="819,655,19" shape="circle">
+          <area alt="Coordinate Monitor" title="Coordinate Monitor" href="#cmonitor" coords="305,474,28" shape="circle">
+          <area alt="Main Screen" title="Main Screen" href="#mainscreen" coords="518,343,23" shape="circle">
+          <area alt="Keyboard" title="Keyboard" href="#keyboard" coords="232,651,22" shape="circle">
+        </map>
+
+        <!-- Pop ups for interior image -->
+        <div class="popup" id="gamecontroller">
+          The game controller is used to control the submarine, adjusting the orientation of the submarine using the
+          joysticks.
+          <a class="close" href="#submarine-interior">X</a>
+        </div>
+        <div class="popup" id="cmonitor">
+          This monitor is used to display the coordinates of the submarine, the depth, and other crucial information
+          regarding navigation.
+          <a class="close" href="#submarine-interior">X</a>
+        </div>
+        <div class="popup" id="mainscreen">
+          This is the largest screen in the submarine, used to display vital diagnostics when connected to a computer.
+          <a class="close" href="#submarine-interior">X</a>
+        </div>
+        <div class="popup" id="keyboard">
+          The keyboard is used to control the coordinate monitors.
+          <a class="close" href="#submarine-interior">X</a>
+        </div>
+
+      </div>
+
+  </section>
+
+  <!-- Image Carousel (Photo Gallery) - From Bootstrap -->
+  <section class="container photo-gallery py-5">
+    <div class="container text-center mb-3">
+      <h2 class="text-light">Photo Gallery</h2>
+    </div>
+    <!-- Carousel images -->
+    <div id="submarine-carousel" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/submerged_inside.webp" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="img/submarine_outside.jpeg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <!-- Image Source: https://media.gettyimages.com/id/82726521/photo/2-man-submarine-underwater.jpg?s=612x612&w=0&k=20&c=n-XQj7hts6kWtjmMMGWg-f3pfF17x5NfQTB_PSjemu4= -->
+          <img src="img/submarine-underwater.jpg" class="d-block w-100">
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#submarine-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#submarine-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="sub-pic pb-4 overflow-hidden"> <!-- Horizontally moving submarine at the bottom of the page -->>
+    <img
+      src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/10393/26677/submarine__33305.1526508074.png?c=2"
+      alt="Picture of Submarine" class="w-25 sub-anim">
+  </div>
+
+  <!-- Footer (requires Bootstrap icons CSS) -->
+  <footer class="p-5 footer text-light text-center position-relative">
+    <div class="container">
+      <p class="lead">Copyright &copy; 1999-2024 Ocean's Expanse</p>
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+      </a>
+    </div>
+  </footer>
 </body>
+
 </html>

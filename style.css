@@ -1,50 +1,61 @@
-
 /* -------------------- Index ---------------------*/
 
-.intro{  /*Adds Background gif to top of index page*/
-    background-image: url("img/underwater-gif.gif"); /*Gif Source: https://i.gifer.com/KT3p.gif*/
+.intro {
+    /*Adds Background gif to top of index page*/
+    background-image: url("img/underwater-gif.gif");
+    /*Gif Source: https://i.gifer.com/KT3p.gif*/
     height: 360px;
-    background-repeat:  round;
+    background-repeat: round;
 }
 
-.overview { /*Adds color for overview background*/
+.overview {
+    /*Adds color for overview background*/
     background-color: #4C6AFF;
 }
 
-.index-body { /*Adds a gradient background color*/
+.index-body {
+    /*Adds a gradient background color*/
     background-image: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
     min-height: 62vh;
 
 }
 
-.main-timeline{ /*Postions the overall timeline correctly*/
+.main-timeline {
+    /*Postions the overall timeline correctly*/
     position: relative;
 }
 
-.timeline { /*Postions the timeline cards correctly*/
+.timeline {
+    /*Postions the timeline cards correctly*/
     position: relative;
     width: 40%;
 }
-  
-  .card { /*Creates color and border for timeline cards*/
+
+.card {
+    /*Creates color and border for timeline cards*/
     background-color: #a1cdf9;
     border: 3px solid #1eb0ff;
-  }
+}
 
-  .left { /*Positioning for left timeline cards*/
+.left {
+    /*Positioning for left timeline cards*/
     padding: 0px 40px 20px 0px;
-  }
-  .right { /*Positioning for right timeline cards*/
+}
+
+.right {
+    /*Positioning for right timeline cards*/
     padding: 0px 0px 20px 40px;
     left: 60%;
-  }
+}
 
 
-.sub-anim { /*Sets animation for sub at bottom of paage*/
+.sub-anim {
+    /*Sets animation for sub at bottom of paage*/
     animation: sub 10s linear infinite;
 }
 
-.time-sub { /*Makes sub in the timeline sway back and forth and sets postion for sticky feature*/
+.time-sub {
+    /*Makes sub in the timeline sway back and forth and sets postion for sticky feature*/
     animation: timelinesub 2s linear infinite;
     animation-direction: alternate;
     overflow: clip;
@@ -52,19 +63,25 @@
 }
 
 
-@keyframes sub { /*Annimation for the sub that crosses the bottom of the page*/
+@keyframes sub {
+
+    /*Annimation for the sub that crosses the bottom of the page*/
     from {
         transform: translateX(100vw);
     }
+
     to {
         transform: translateX(-100%);
     }
 }
 
-@keyframes timelinesub { /*Swaying annimation for the sub that moves vertically*/
+@keyframes timelinesub {
+
+    /*Swaying annimation for the sub that moves vertically*/
     from {
         transform: rotate(-5deg);
     }
+
     to {
         transform: rotate(5deg);
     }
@@ -74,62 +91,121 @@
 
 /* -------------------- Submarine ----------------------*/
 
-@keyframes pop-in { /* Pop up animation keyframe */
-    0% { opacity: 0; transform: scale(0.1); }
-    100% { opacity: 1; transform: scale(1); }
+@keyframes pop-in {
+
+    /* Pop up animation keyframe */
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.submarine { /*Positions picture of sub*/
+.submarine {
+    /*Positions picture of sub*/
     position: relative;
     width: 40%;
 }
 
-.popout{  /* Ruleset for popout animation for info cards*/
-    animation:pop-in 0.5s;
+.popout {
+    /* Ruleset for popout animation for info cards*/
+    animation: pop-in 0.5s;
 }
 
-.submarine-body { /* Gradient Background for Submarine Page*/
-    max-width:100%;
-    height:auto;
-    max-height:100%;
+.submarine-body {
+    /* Gradient Background for Submarine Page*/
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
     background: linear-gradient(0deg, #020024 0%, #090979 35%, #0392CC 100%);
 }
 
-.text-container{ /* Specifies width for text containers*/
+.text-container {
+    /* Specifies width for text containers*/
     width: 50%
 }
 
 
-.about-sub { /* Specifies animation properties for moving submarine image*/
-    animation: timelinesub  linear infinite;
+.about-sub {
+    /* Specifies animation properties for moving submarine image*/
+    animation: timelinesub linear infinite;
     animation-direction: alternate;
     overflow: clip;
     top: 3%;
 }
 
-.main-info-cards{ /*Postions the submarine info cards correctly*/
+
+.area {
+    /* Specifies outline for clickable areas in the submarine images*/
+    outline: 5px solid red !important;
+}
+
+.popup {
+    /* Specifies the style for popup textbox once an area on the image is clicked */
+    padding: 20px;
+    background-color: rgba(100, 100, 100, 0.9);
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    position: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.popup>.close {
+    /* Specifies the style of the close box on the text box */
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: black;
+    padding: 4px 10px;
+}
+
+.popup:target {
+    /* Makes the popup appear on click */
+    opacity: 1;
+    transform: scale(1);
+}
+
+.main-info-cards {
+    /*Postions the submarine info cards correctly*/
     position: relative;
 }
 
-.photo-gallery { /* Adjusts the size of the Photo Gallery */
+.photo-gallery {
+    /* Adjusts the size of the Photo Gallery */
     position: relative;
     width: 50%;
+}
+
+.img-round {
+    /* Adds border radius to images */
+    border-radius: 2%;
 }
 
 
 /* -------------------- Pricing ----------------------*/
 
-.cardabout:hover { /*Adds hoving animation to pricing cards*/
+.cardabout:hover {
+    /*Adds hoving animation to pricing cards*/
     transform: scale(1.1);
     transition: transform 0.2s ease;
-    border:3px solid rgb(255, 140, 0);
-  }
-  .card-body { /*Sets background color to pricing cards*/
-    background-color:rgb(181, 196, 238);
-  }
+    border: 3px solid rgb(255, 140, 0);
+}
+
+.card-body {
+    /*Sets background color to pricing cards*/
+    background-color: rgb(181, 196, 238);
+}
 
 
-button{ /*Button that brings the user to the book now page (Added in later)*/
+button {
+    /*Button that brings the user to the book now page (Added in later)*/
     border: none;
     border-radius: 5px;
     padding: 12px 20px;
@@ -140,6 +216,8 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     position: relative;
 }
 
+
+/*Properties for first ribbon (NEW)*/
 .ribbon1 {
     width: 80px;
     font-size: 19px;
@@ -150,11 +228,13 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     text-align: center;
     border-radius: 25px;
     transform: rotate(20deg);
-    background-color:  #000000;
+    background-color: #000000;
     font-weight: bold;
     color: rgb(255, 214, 33);
-  }
-  .ribbon2 {
+}
+
+/*Properties for second ribbon (HOT)*/
+.ribbon2 {
     width: 80px;
     font-size: 20px;
     padding: 4px;
@@ -167,8 +247,10 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     background-color: rgb(255, 0, 0);
     font-weight: bold;
     color: rgb(255, 255, 255);
-  }
-  .ribbon3 {
+}
+
+/*Properties for third ribbon (VALUE)*/
+.ribbon3 {
     width: 80px;
     font-size: 20px;
     padding: 4px;
@@ -181,8 +263,10 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     background-color: rgb(14, 235, 14);
     font-weight: bold;
     color: rgb(255, 255, 255);
-  }
-.cardabout { /* Creates standard size and spacing for the cards */
+}
+
+.cardabout {
+    /* Creates standard size and spacing for the cards */
     width: 55vw;
     row-gap: 1ch;
     border: 3px solid black;
@@ -195,7 +279,8 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     display: inline-block;
     position: relative;
     /*color: #0087ca;*/
-  }
+}
+
 .hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -208,106 +293,95 @@ button{ /*Button that brings the user to the book now page (Added in later)*/
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
+
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
 
 
-.footer{ /* footer background color */
-    background-color: #16419e; 
+.footer {
+    /* footer background color */
+    background-color: #16419e;
 }
 
-.icon-white {  /* Color for icons */
+.icon-white {
+    /* Color for icons */
     color: #FFF;
 }
 
-.nb-background-color {  /* navbar background color */
+.nb-background-color {
+    /* navbar background color */
     background-image: linear-gradient(0deg, #0367b5 0%, #0287c5 35%, #bcdaea 100%);
 }
 
-.nbMenuItem {   
-            /* navbar link text properties */
-    color:white;
+/* navbar link text properties */
+.nbMenuItem {
+
+    color: white;
     font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
-.row { 
+.row {
     justify-content: center;
 }
 
 * {
- font-family: Montserrat;  
+    font-family: Montserrat;
 }
 
+/* boldens navbar text */
 .navBold {
     font-weight: bold;
 }
 
 /* -------------------- SignIn + Register ---------------------*/
 
-table th{
-    /*Keep column headers at the top as table is scrolled*/
+/*Keep column headers at the top as table is scrolled*/
+table th {
     position: sticky;
-    top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
+    top: 0px;
+    /* https://www.w3schools.com/cssref/pr_pos_top.php*/
     overflow-y: auto;
 
 }
-.signintext{
-    /*changes sign in button text and related text to white*/
-    color:white;
-}
-.registertext{
-    /*changes register text to white*/
 
-    color:white;
+/*changes sign in button text and related text to white*/
+.signintext {
+    color: white;
 }
 
+/*changes register text to white*/
+.registertext {
 
-
-.dataForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
+    color: white;
 }
 
-
-
-.overview-font{
-    font-size:25px;
-}
-
-.signUpForm{
+/* Properties for the sign up form options */
+.signUpForm {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nbMenuItem{
-    font-size:25px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.notes{
-    font-size:20px;
-}
 
 /* -------------------- Depth ---------------------*/
 
 /* The alert message box */
 .alert {
     padding: 20px;
-    background-color: #FFA92B; /* Red */
+    background-color: #FFA92B;
+    /* Red */
     color: white;
     margin-bottom: 15px;
-  }
-  
-  /* The close button for the alert */
-  .closebtn {
+}
+
+/* The close button for the alert */
+.closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -316,24 +390,34 @@ table th{
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
+}
 
-  /* Hover animation/color change for the close button */
-  .closebtn:hover {
+/* Hover animation/color change for the close button */
+.closebtn:hover {
     color: black;
-  }
+}
 
-.form-select{
+/*Controls the width of the anwser selection fields*/
+.form-select {
     width: 35vw;
 }
 
-.chart-wrapper{
+/* Properties that format the chart */
+.chart-wrapper {
     margin: auto;
-    padding: 10px; 
+    padding: 10px;
     height: 70vh;
-    width:  80vw;
+    width: 80vw;
     min-height: 400px;
     background-color: whitesmoke !important;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+}
+
+/*Text properties for the data forms*/
+.dataForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
